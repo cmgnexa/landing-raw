@@ -28,8 +28,21 @@
     <link rel="icon" type="image/png" href="./img/cmg_nexa_logo.png">
     <link rel="apple-touch-icon" href="./img/cmg_nexa_logo.png">
     
-    <!-- Tailwind CSS (Local) -->
-    <link rel="stylesheet" href="./dist/output.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'purple-dark': '#49326b',
+                        'purple-medium': '#4C1D95',
+                        'purple-light': '#7C3AED'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body class="bg-white text-gray-900">
     <!-- Header -->
