@@ -1,2 +1,2 @@
 # landing-raw
-basic landing
+landing
