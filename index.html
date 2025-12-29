@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CMG NEXA SRL - Transform Your Business with Complete IT Solutions</title>
     <meta name="description" content="CMG NEXA SRL provides complete IT solutions that streamline operations and accelerate growth. Custom software development, ERP systems, cybersecurity tools, and strategic IT consulting.">
-    <meta name="keywords" content="IT consulting, custom software, ERP systems, cybersecurity, software development, Romania, CMG NEXA">
+    <meta name="keywords" content="IT consulting, custom software, ERP systems, cybersecurity, software development, Romania, CMG NEXA, Odoo Partner">
     <meta name="author" content="CMG NEXA SRL">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cmgnexa.com/">
@@ -16,20 +16,24 @@
     <meta property="og:image" content="./img/cmg_nexa_logo.png">
     <meta property="og:site_name" content="CMG NEXA SRL">
     <meta property="og:locale" content="en_US">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://cmgnexa.com/">
     <meta property="twitter:title" content="CMG NEXA SRL - Transform Your Business with Complete IT Solutions">
     <meta property="twitter:description" content="Complete IT solutions that streamline operations and accelerate growth. Custom software development, ERP systems, cybersecurity tools, and strategic IT consulting.">
-    <meta property="twitter:image" content="./img/cmg_nexa_logo.png">
-    
+    <meta property="twitter:image" content="https://cmgnexa.com/img/cmg_nexa_logo.png">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./img/cmg_nexa_logo.png">
     <link rel="apple-touch-icon" href="./img/cmg_nexa_logo.png">
-    
+
     <!-- Tailwind CSS CDN -->
-    <script src="./vendor/tailwindcss/tailwind_3.4.17.min.css"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Devicon for technology icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <!-- Font Awesome for service icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script>
         tailwind.config = {
             theme: {
@@ -43,21 +47,35 @@
             }
         }
     </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="bg-white text-gray-900">
     <!-- Header -->
-    <header class="bg-purple-dark shadow-lg">
+    <header class="bg-purple-dark shadow-lg fixed w-full top-0 z-50">
         <nav class="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
             <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-2 sm:space-x-4">
-                    <img src="./img/cmg_nexa_logo.png" alt="CMG NEXA SRL" class="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 rounded-full object-cover">
+                <a href="index.html" class="flex items-center space-x-2 sm:space-x-4">
+                    <img src="./img/cmg_nexa_logo.png" alt="CMG NEXA SRL" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover">
                     <h1 class="text-white text-lg sm:text-xl lg:text-2xl font-bold">CMG NEXA SRL</h1>
-                </div>
+                </a>
                 <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
-                    <a href="#services" class="text-white hover:text-purple-light transition-colors">Services</a>
-                    <a href="#about" class="text-white hover:text-purple-light transition-colors">About</a>
-                    <a href="#contact" class="text-white hover:text-purple-light transition-colors">Contact</a>
-                    <a href="#contact" class="bg-white text-purple-dark px-3 lg:px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm lg:text-base">Get In Touch</a>
+                    <a href="#services" class="text-white hover:text-purple-light transition-colors" data-lang-en="Services" data-lang-ro="Servicii">Services</a>
+                    <a href="odoo.html" class="text-white hover:text-purple-light transition-colors">Odoo</a>
+                    <a href="#about" class="text-white hover:text-purple-light transition-colors" data-lang-en="About" data-lang-ro="Despre Noi">About</a>
+                    <a href="#contact" class="text-white hover:text-purple-light transition-colors" data-lang-en="Contact" data-lang-ro="Contact">Contact</a>
+                    <a href="#contact" class="bg-white text-purple-dark px-3 lg:px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm lg:text-base btn-primary" data-lang-en="Get In Touch" data-lang-ro="Contacteaza-ne">Get In Touch</a>
+                    <!-- Language Switcher with Flags -->
+                    <div class="flex items-center space-x-2 ml-4 border-l border-white/30 pl-4">
+                        <button onclick="setLanguage('en')" class="lang-btn hover:opacity-80 transition-opacity" data-lang="en" title="English">
+                            <span class="text-xl">🇬🇧</span>
+                        </button>
+                        <span class="text-white/50">|</span>
+                        <button onclick="setLanguage('ro')" class="lang-btn hover:opacity-80 transition-opacity opacity-60" data-lang="ro" title="Romana">
+                            <span class="text-xl">🇷🇴</span>
+                        </button>
+                    </div>
                 </div>
                 <button id="mobile-menu-button" class="md:hidden text-white p-2">
                     <svg id="menu-icon" class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -68,39 +86,51 @@
                     </svg>
                 </button>
             </div>
-            
+
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden bg-purple-dark border-t border-white/20">
+            <div id="mobile-menu" class="md:hidden hidden bg-purple-dark border-t border-white/20 mt-3">
                 <div class="px-4 py-4 space-y-4">
-                    <a href="#services" class="block text-white hover:text-purple-light transition-colors py-2">Services</a>
-                    <a href="#about" class="block text-white hover:text-purple-light transition-colors py-2">About</a>
-                    <a href="#contact" class="block text-white hover:text-purple-light transition-colors py-2">Contact</a>
-                    <a href="#contact" class="block bg-white text-purple-dark px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center">Get In Touch</a>
+                    <a href="#services" class="block text-white hover:text-purple-light transition-colors py-2" data-lang-en="Services" data-lang-ro="Servicii">Services</a>
+                    <a href="odoo.html" class="block text-white hover:text-purple-light transition-colors py-2">Odoo</a>
+                    <a href="#about" class="block text-white hover:text-purple-light transition-colors py-2" data-lang-en="About" data-lang-ro="Despre Noi">About</a>
+                    <a href="#contact" class="block text-white hover:text-purple-light transition-colors py-2" data-lang-en="Contact" data-lang-ro="Contact">Contact</a>
+                    <a href="#contact" class="block bg-white text-purple-dark px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center" data-lang-en="Get In Touch" data-lang-ro="Contacteaza-ne">Get In Touch</a>
+                    <!-- Mobile Language Switcher with Flags -->
+                    <div class="flex items-center justify-center space-x-4 pt-4 border-t border-white/20">
+                        <button onclick="setLanguage('en')" class="lang-btn flex items-center space-x-2 hover:opacity-80 transition-opacity px-3 py-1 rounded" data-lang="en">
+                            <span class="text-xl">🇬🇧</span>
+                            <span class="text-white text-sm">English</span>
+                        </button>
+                        <button onclick="setLanguage('ro')" class="lang-btn flex items-center space-x-2 hover:opacity-80 transition-opacity opacity-60 px-3 py-1 rounded" data-lang="ro">
+                            <span class="text-xl">🇷🇴</span>
+                            <span class="text-white text-sm">Romana</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-purple-dark to-purple-medium text-white min-h-screen flex items-center py-8 sm:py-12">
+    <section class="bg-gradient-to-br from-purple-dark to-purple-medium text-white min-h-screen flex items-center py-8 sm:py-12 pt-24">
         <div class="container mx-auto px-4 sm:px-6">
             <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
                 <div class="text-center lg:text-left order-2 lg:order-1">
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 lg:mb-8">Transform Your Business</h2>
-                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 px-2 sm:px-0 leading-relaxed">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 lg:mb-8 animate-fade-in-up" data-lang-en="Transform Your Business" data-lang-ro="Transforma-ti Afacerea">Transform Your Business</h2>
+                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 px-2 sm:px-0 leading-relaxed animate-fade-in-up animate-delay-100" data-lang-en="Complete IT solutions that streamline operations and accelerate growth." data-lang-ro="Solutii IT complete care optimizeaza operatiunile si accelereaza cresterea.">
                         Complete IT solutions that streamline operations and accelerate growth.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start px-2 sm:px-0">
-                        <a href="#contact" class="bg-white text-purple-dark px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center w-full sm:w-auto">
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start px-2 sm:px-0 animate-fade-in-up animate-delay-200">
+                        <a href="#contact" class="bg-white text-purple-dark px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center w-full sm:w-auto btn-primary" data-lang-en="Get Started" data-lang-ro="Incepe Acum">
                             Get Started
                         </a>
-                        <a href="#services" class="border-2 border-white text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-dark transition-colors text-center w-full sm:w-auto">
+                        <a href="#services" class="border-2 border-white text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-dark transition-colors text-center w-full sm:w-auto" data-lang-en="Our Services" data-lang-ro="Serviciile Noastre">
                             Our Services
                         </a>
                     </div>
                 </div>
                 <div class="flex justify-center lg:justify-end order-1 lg:order-2">
-                    <div class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+                    <div class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg animate-float">
                         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20">
                             <div class="space-y-3 sm:space-y-4">
                                 <div class="flex items-center space-x-2 sm:space-x-3">
@@ -134,17 +164,10 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Contact Info at Bottom -->
             <div class="mt-8 sm:mt-12 lg:mt-16 pt-6 sm:pt-8 border-t border-white/20">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-row lg:flex-wrap justify-center items-center gap-3 sm:gap-4 lg:gap-6 xl:gap-8 text-sm sm:text-base px-2 sm:px-4">
-                    <div class="flex items-center justify-center sm:justify-start">
-                        <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 text-purple-light flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
-                        <span class="text-center sm:text-left">Cleja, Bacau (Romania)</span>
-                    </div>
                     <div class="flex items-center justify-center sm:justify-start">
                         <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 text-purple-light flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
@@ -155,7 +178,7 @@
                         <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 text-purple-light flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                         </svg>
-                        <span class="text-center sm:text-left break-all sm:break-normal">administration@cmgnexa.com</span>
+                        <span class="text-center sm:text-left break-all sm:break-normal">office@cmgnexa.com</span>
                     </div>
                     <div class="flex items-center justify-center sm:justify-start">
                         <svg class="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 text-purple-light flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -168,105 +191,251 @@
         </div>
     </section>
 
+    <!-- Odoo Partner Highlight Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="bg-gradient-to-r from-purple-dark via-purple-medium to-purple-light rounded-3xl p-8 md:p-12 shadow-2xl">
+                <div class="grid lg:grid-cols-2 gap-8 items-center">
+                    <div class="text-white">
+                        <div class="flex items-center gap-4 mb-6">
+                            <img src="./img/odoo/odoo_ready_partners_rgb.svg" alt="Odoo Ready Partner" class="h-16 md:h-20 partner-badge bg-white rounded-lg p-2">
+                            <div>
+                                <span class="bg-white/20 text-sm px-3 py-1 rounded-full" data-lang-en="Official Partner" data-lang-ro="Partener Oficial">Official Partner</span>
+                            </div>
+                        </div>
+                        <h3 class="text-3xl md:text-4xl font-bold mb-4" data-lang-en="Your Trusted Odoo Partner in Romania" data-lang-ro="Partenerul Dvs. de Incredere Odoo in Romania">Your Trusted Odoo Partner in Romania</h3>
+                        <p class="text-lg text-white/90 mb-6" data-lang-en="We provide complete Odoo ERP solutions: implementation, customization, training, and ongoing support. Transform your business with the world's most popular open-source ERP system." data-lang-ro="Oferim solutii complete Odoo ERP: implementare, personalizare, instruire si suport continuu. Transformati afacerea cu cel mai popular sistem ERP open-source din lume.">
+                            We provide complete Odoo ERP solutions: implementation, customization, training, and ongoing support. Transform your business with the world's most popular open-source ERP system.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-8">
+                            <div class="bg-white/10 rounded-lg p-4 text-center">
+                                <div class="text-2xl font-bold">ERP</div>
+                                <div class="text-sm text-white/80" data-lang-en="Enterprise Resource Planning" data-lang-ro="Planificarea Resurselor">Enterprise Resource Planning</div>
+                            </div>
+                            <div class="bg-white/10 rounded-lg p-4 text-center">
+                                <div class="text-2xl font-bold">CRM</div>
+                                <div class="text-sm text-white/80" data-lang-en="Customer Management" data-lang-ro="Managementul Clientilor">Customer Management</div>
+                            </div>
+                            <div class="bg-white/10 rounded-lg p-4 text-center">
+                                <div class="text-2xl font-bold">HR</div>
+                                <div class="text-sm text-white/80" data-lang-en="Human Resources" data-lang-ro="Resurse Umane">Human Resources</div>
+                            </div>
+                            <div class="bg-white/10 rounded-lg p-4 text-center">
+                                <div class="text-2xl font-bold">+40</div>
+                                <div class="text-sm text-white/80" data-lang-en="Business Apps" data-lang-ro="Aplicatii Business">Business Apps</div>
+                            </div>
+                        </div>
+                        <a href="odoo.html" class="inline-flex items-center bg-white text-purple-dark px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors btn-primary">
+                            <span data-lang-en="Discover Odoo Solutions" data-lang-ro="Descopera Solutiile Odoo">Discover Odoo Solutions</span>
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="hidden lg:block">
+                        <div class="bg-white/10 rounded-2xl p-6 backdrop-blur-sm border border-white/20">
+                            <h4 class="text-white text-xl font-semibold mb-4" data-lang-en="Odoo Modules We Implement" data-lang-ro="Module Odoo pe care le Implementam">Odoo Modules We Implement</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center text-white/90">
+                                    <svg class="w-5 h-5 mr-3 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    <span>Sales & CRM</span>
+                                </div>
+                                <div class="flex items-center text-white/90">
+                                    <svg class="w-5 h-5 mr-3 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    <span data-lang-en="Inventory & Warehouse" data-lang-ro="Inventar & Depozit">Inventory & Warehouse</span>
+                                </div>
+                                <div class="flex items-center text-white/90">
+                                    <svg class="w-5 h-5 mr-3 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    <span data-lang-en="Accounting & Finance" data-lang-ro="Contabilitate & Finante">Accounting & Finance</span>
+                                </div>
+                                <div class="flex items-center text-white/90">
+                                    <svg class="w-5 h-5 mr-3 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    <span data-lang-en="Manufacturing & MRP" data-lang-ro="Productie & MRP">Manufacturing & MRP</span>
+                                </div>
+                                <div class="flex items-center text-white/90">
+                                    <svg class="w-5 h-5 mr-3 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    <span>E-commerce & Website</span>
+                                </div>
+                                <div class="flex items-center text-white/90">
+                                    <svg class="w-5 h-5 mr-3 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    <span data-lang-en="Project Management" data-lang-ro="Managementul Proiectelor">Project Management</span>
+                                </div>
+                                <div class="flex items-center text-white/90">
+                                    <svg class="w-5 h-5 mr-3 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    <span data-lang-en="Human Resources" data-lang-ro="Resurse Umane">Human Resources</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Services Section -->
     <section id="services" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
-            <h3 class="text-4xl font-bold text-center mb-16 text-purple-dark">Our Solutions</h3>
-            
-            <!-- All Services in 3 Rows -->
+            <h3 class="text-4xl font-bold text-center mb-16 text-purple-dark" data-lang-en="Our Solutions" data-lang-ro="Solutiile Noastre">Our Solutions</h3>
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Row 1 -->
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <!-- Custom Software Development -->
+                <div class="bg-white p-8 rounded-lg shadow-lg service-card">
                     <div class="w-16 h-16 bg-purple-light rounded-lg flex items-center justify-center mb-6">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                         </svg>
                     </div>
-                    <h5 class="text-xl font-semibold mb-4 text-purple-dark">Custom Software Development</h5>
-                    <p class="text-gray-600">Tailored software solutions designed specifically for your business needs and requirements.</p>
+                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="Custom Software Development" data-lang-ro="Dezvoltare Software Personalizat">Custom Software Development</h5>
+                    <p class="text-gray-600" data-lang-en="Tailored software solutions designed specifically for your business needs and requirements." data-lang-ro="Solutii software personalizate, concepute special pentru nevoile si cerintele afacerii dumneavoastra.">Tailored software solutions designed specifically for your business needs and requirements.</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <!-- ERP & CRM Systems -->
+                <div class="bg-white p-8 rounded-lg shadow-lg service-card">
                     <div class="w-16 h-16 bg-purple-light rounded-lg flex items-center justify-center mb-6">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
                         </svg>
                     </div>
-                    <h5 class="text-xl font-semibold mb-4 text-purple-dark">ERP & CRM Systems</h5>
-                    <p class="text-gray-600">Complete enterprise resource planning and customer relationship management solutions.</p>
+                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="ERP & CRM Systems" data-lang-ro="Sisteme ERP & CRM">ERP & CRM Systems</h5>
+                    <p class="text-gray-600" data-lang-en="Complete enterprise resource planning and customer relationship management solutions." data-lang-ro="Solutii complete de planificare a resurselor si managementul relatiilor cu clientii.">Complete enterprise resource planning and customer relationship management solutions.</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <!-- Software Support & Maintenance -->
+                <div class="bg-white p-8 rounded-lg shadow-lg service-card">
                     <div class="w-16 h-16 bg-purple-light rounded-lg flex items-center justify-center mb-6">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
                         </svg>
                     </div>
-                    <h5 class="text-xl font-semibold mb-4 text-purple-dark">Software Support & Maintenance</h5>
-                    <p class="text-gray-600">24/7 support, maintenance, and optimization services for your software solutions.</p>
+                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="Software Support & Maintenance" data-lang-ro="Suport & Mentenanta Software">Software Support & Maintenance</h5>
+                    <p class="text-gray-600" data-lang-en="24/7 support, maintenance, and optimization services for your software solutions." data-lang-ro="Suport 24/7, mentenanta si servicii de optimizare pentru solutiile dumneavoastra software.">24/7 support, maintenance, and optimization services for your software solutions.</p>
                 </div>
 
-                <!-- Row 2 -->
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <!-- System Integration -->
+                <div class="bg-white p-8 rounded-lg shadow-lg service-card">
                     <div class="w-16 h-16 bg-purple-light rounded-lg flex items-center justify-center mb-6">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
                         </svg>
                     </div>
-                    <h5 class="text-xl font-semibold mb-4 text-purple-dark">System Integration</h5>
-                    <p class="text-gray-600">Connect your existing systems for improved workflow and data consistency.</p>
+                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="System Integration" data-lang-ro="Integrare Sisteme">System Integration</h5>
+                    <p class="text-gray-600" data-lang-en="Connect your existing systems for improved workflow and data consistency." data-lang-ro="Conectati sistemele existente pentru un flux de lucru imbunatatit si consistenta datelor.">Connect your existing systems for improved workflow and data consistency.</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <!-- Strategic IT Consulting -->
+                <div class="bg-white p-8 rounded-lg shadow-lg service-card">
                     <div class="w-16 h-16 bg-purple-light rounded-lg flex items-center justify-center mb-6">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
                         </svg>
                     </div>
-                    <h5 class="text-xl font-semibold mb-4 text-purple-dark">Strategic IT Consulting</h5>
-                    <p class="text-gray-600">Strategic technology guidance to optimize your business processes and digital transformation.</p>
+                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="Strategic IT Consulting" data-lang-ro="Consultanta IT Strategica">Strategic IT Consulting</h5>
+                    <p class="text-gray-600" data-lang-en="Strategic technology guidance to optimize your business processes and digital transformation." data-lang-ro="Ghidare tehnologica strategica pentru optimizarea proceselor de afaceri si transformare digitala.">Strategic technology guidance to optimize your business processes and digital transformation.</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <!-- Web Development -->
+                <div class="bg-white p-8 rounded-lg shadow-lg service-card">
                     <div class="w-16 h-16 bg-purple-light rounded-lg flex items-center justify-center mb-6">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
                         </svg>
                     </div>
-                    <h5 class="text-xl font-semibold mb-4 text-purple-dark">Web Development</h5>
-                    <p class="text-gray-600">Custom web applications using modern technologies: Golang, C#, Python, and responsive design.</p>
+                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="Web Development" data-lang-ro="Dezvoltare Web">Web Development</h5>
+                    <p class="text-gray-600" data-lang-en="Custom web applications using modern technologies: Golang, C#, Python, and responsive design." data-lang-ro="Aplicatii web personalizate folosind tehnologii moderne: Golang, C#, Python si design responsive.">Custom web applications using modern technologies: Golang, C#, Python, and responsive design.</p>
                 </div>
 
-                <!-- Row 3 -->
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <!-- E-Commerce Platforms -->
+                <div class="bg-white p-8 rounded-lg shadow-lg service-card">
                     <div class="w-16 h-16 bg-purple-light rounded-lg flex items-center justify-center mb-6">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
                         </svg>
                     </div>
-                    <h5 class="text-xl font-semibold mb-4 text-purple-dark">E-Commerce Platforms</h5>
-                    <p class="text-gray-600">Complete online store development and maintenance for digital commerce success.</p>
+                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="E-Commerce Platforms" data-lang-ro="Platforme E-Commerce">E-Commerce Platforms</h5>
+                    <p class="text-gray-600" data-lang-en="Complete online store development and maintenance for digital commerce success." data-lang-ro="Dezvoltare si mentenanta completa a magazinelor online pentru succes in comertul digital.">Complete online store development and maintenance for digital commerce success.</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <!-- Online Presence -->
+                <div class="bg-white p-8 rounded-lg shadow-lg service-card">
                     <div class="w-16 h-16 bg-purple-light rounded-lg flex items-center justify-center mb-6">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                         </svg>
                     </div>
-                    <h5 class="text-xl font-semibold mb-4 text-purple-dark">Online Presence</h5>
-                    <p class="text-gray-600">Professional web presence, digital marketing, and online advertising solutions.</p>
+                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="Online Presence" data-lang-ro="Prezenta Online">Online Presence</h5>
+                    <p class="text-gray-600" data-lang-en="Professional web presence, digital marketing, and online advertising solutions." data-lang-ro="Prezenta web profesionala, marketing digital si solutii de publicitate online.">Professional web presence, digital marketing, and online advertising solutions.</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <!-- Email & Collaboration -->
+                <div class="bg-white p-8 rounded-lg shadow-lg service-card">
                     <div class="w-16 h-16 bg-purple-light rounded-lg flex items-center justify-center mb-6">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                         </svg>
                     </div>
-                    <h5 class="text-xl font-semibold mb-4 text-purple-dark">Email & Collaboration</h5>
-                    <p class="text-gray-600">Unified communications and email solutions to enhance team productivity and collaboration.</p>
+                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="Email & Collaboration" data-lang-ro="Email & Colaborare">Email & Collaboration</h5>
+                    <p class="text-gray-600" data-lang-en="Unified communications and email solutions to enhance team productivity and collaboration." data-lang-ro="Comunicatii unificate si solutii email pentru a imbunatati productivitatea si colaborarea echipei.">Unified communications and email solutions to enhance team productivity and collaboration.</p>
+                </div>
+            </div>
+
+            <!-- Technologies Section -->
+            <div class="mt-16">
+                <h4 class="text-2xl font-bold text-center mb-8 text-purple-dark" data-lang-en="Technologies We Work With" data-lang-ro="Tehnologii cu care Lucram">Technologies We Work With</h4>
+                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 items-center justify-items-center">
+                    <!-- Python -->
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                        <i class="devicon-python-plain colored text-5xl mb-2"></i>
+                        <span class="text-xs text-gray-600 font-medium">Python</span>
+                    </div>
+                    <!-- Go -->
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                        <i class="devicon-go-original-wordmark colored text-5xl mb-2"></i>
+                        <span class="text-xs text-gray-600 font-medium">Golang</span>
+                    </div>
+                    <!-- C# -->
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                        <i class="devicon-csharp-plain colored text-5xl mb-2"></i>
+                        <span class="text-xs text-gray-600 font-medium">C#</span>
+                    </div>
+                    <!-- PostgreSQL -->
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                        <i class="devicon-postgresql-plain colored text-5xl mb-2"></i>
+                        <span class="text-xs text-gray-600 font-medium">PostgreSQL</span>
+                    </div>
+                    <!-- Docker -->
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                        <i class="devicon-docker-plain colored text-5xl mb-2"></i>
+                        <span class="text-xs text-gray-600 font-medium">Docker</span>
+                    </div>
+                    <!-- Linux -->
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                        <i class="devicon-linux-plain text-5xl mb-2"></i>
+                        <span class="text-xs text-gray-600 font-medium">Linux</span>
+                    </div>
+                    <!-- AWS -->
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                        <i class="devicon-amazonwebservices-plain-wordmark colored text-5xl mb-2"></i>
+                        <span class="text-xs text-gray-600 font-medium">AWS</span>
+                    </div>
+                    <!-- Git -->
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
+                        <i class="devicon-git-plain colored text-5xl mb-2"></i>
+                        <span class="text-xs text-gray-600 font-medium">Git</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Odoo Partner CTA -->
+            <div class="mt-16 bg-gradient-to-r from-purple-dark to-purple-medium rounded-2xl p-8 text-white text-center">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                    <img src="./img/odoo/odoo_ready_partners_rgb.svg" alt="Odoo Ready Partner" class="h-16 md:h-20 partner-badge">
+                    <div class="text-center md:text-left">
+                        <h4 class="text-2xl font-bold mb-2" data-lang-en="Official Odoo Partner in Romania" data-lang-ro="Partener Oficial Odoo in Romania">Official Odoo Partner in Romania</h4>
+                        <p class="text-white/80 mb-4" data-lang-en="Complete Odoo ERP implementation, customization, and support services." data-lang-ro="Implementare completa Odoo ERP, personalizare si servicii de suport.">Complete Odoo ERP implementation, customization, and support services.</p>
+                        <a href="odoo.html" class="inline-block bg-white text-purple-dark px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors btn-primary" data-lang-en="Learn More" data-lang-ro="Afla Mai Mult">
+                            Learn More
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -277,53 +446,53 @@
         <div class="container mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h3 class="text-4xl font-bold mb-6 text-purple-dark">About CMG NEXA</h3>
-                    <p class="text-lg text-gray-600 mb-6">
+                    <h3 class="text-4xl font-bold mb-6 text-purple-dark" data-lang-en="About CMG NEXA" data-lang-ro="Despre CMG NEXA">About CMG NEXA</h3>
+                    <p class="text-lg text-gray-600 mb-6" data-lang-en="We are a young, dynamic IT company with 100% Romanian capital, founded to bring enterprise-level professionalism to a market segment often overlooked by multinational corporations." data-lang-ro="Suntem o companie IT tanara si dinamica cu capital 100% romanesc, fondata pentru a aduce profesionalism de nivel enterprise intr-un segment de piata adesea ignorat de corporatiile multinationale.">
                         We are a young, dynamic IT company with 100% Romanian capital, founded to bring enterprise-level professionalism to a market segment often overlooked by multinational corporations.
                     </p>
-                    <p class="text-gray-600 mb-8">
+                    <p class="text-gray-600 mb-8" data-lang-en="Our team combines technical expertise with business acumen to create solutions that not only work today but scale for tomorrow's challenges. We believe in integrity, creativity, and responsibility, delivering results that exceed expectations." data-lang-ro="Echipa noastra combina expertiza tehnica cu viziunea de afaceri pentru a crea solutii care nu doar functioneaza astazi, dar se extind pentru provocarile de maine. Credem in integritate, creativitate si responsabilitate, livrand rezultate care depasesc asteptarile.">
                         Our team combines technical expertise with business acumen to create solutions that not only work today but scale for tomorrow's challenges. We believe in integrity, creativity, and responsibility, delivering results that exceed expectations.
                     </p>
                     <div class="grid grid-cols-2 gap-6">
                         <div class="text-center">
                             <div class="text-3xl font-bold text-purple-dark mb-2">100%</div>
-                            <div class="text-sm text-gray-600">Romanian Capital</div>
+                            <div class="text-sm text-gray-600" data-lang-en="Romanian Capital" data-lang-ro="Capital Romanesc">Romanian Capital</div>
                         </div>
                         <div class="text-center">
                             <div class="text-3xl font-bold text-purple-dark mb-2">24/7</div>
-                            <div class="text-sm text-gray-600">Support Available</div>
+                            <div class="text-sm text-gray-600" data-lang-en="Support Available" data-lang-ro="Suport Disponibil">Support Available</div>
                         </div>
                         <div class="text-center">
                             <div class="text-3xl font-bold text-purple-dark mb-2">50+</div>
-                            <div class="text-sm text-gray-600">Projects Completed</div>
+                            <div class="text-sm text-gray-600" data-lang-en="Projects Completed" data-lang-ro="Proiecte Finalizate">Projects Completed</div>
                         </div>
                         <div class="text-center">
                             <div class="text-3xl font-bold text-purple-dark mb-2">99%</div>
-                            <div class="text-sm text-gray-600">Client Satisfaction</div>
+                            <div class="text-sm text-gray-600" data-lang-en="Client Satisfaction" data-lang-ro="Satisfactia Clientilor">Client Satisfaction</div>
                         </div>
                     </div>
                 </div>
                 <div class="bg-gradient-to-br from-purple-dark to-purple-medium rounded-2xl p-8 text-white">
-                    <h4 class="text-2xl font-bold mb-6">Our Mission</h4>
-                    <p class="text-lg mb-6">
+                    <h4 class="text-2xl font-bold mb-6" data-lang-en="Our Mission" data-lang-ro="Misiunea Noastra">Our Mission</h4>
+                    <p class="text-lg mb-6" data-lang-en="To deliver innovative IT solutions that transform businesses, streamline operations, and accelerate growth through cutting-edge technology and personalized service." data-lang-ro="Sa livram solutii IT inovatoare care transforma afacerile, optimizeaza operatiunile si accelereaza cresterea prin tehnologie de varf si servicii personalizate.">
                         To deliver innovative IT solutions that transform businesses, streamline operations, and accelerate growth through cutting-edge technology and personalized service.
                     </p>
                     <div class="space-y-4">
                         <div class="flex items-center">
                             <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
-                            <span>Enterprise-level professionalism</span>
+                            <span data-lang-en="Enterprise-level professionalism" data-lang-ro="Profesionalism de nivel enterprise">Enterprise-level professionalism</span>
                         </div>
                         <div class="flex items-center">
                             <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
-                            <span>Cutting-edge technology solutions</span>
+                            <span data-lang-en="Cutting-edge technology solutions" data-lang-ro="Solutii tehnologice de ultima generatie">Cutting-edge technology solutions</span>
                         </div>
                         <div class="flex items-center">
                             <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
-                            <span>Personalized service approach</span>
+                            <span data-lang-en="Personalized service approach" data-lang-ro="Abordare personalizata a serviciilor">Personalized service approach</span>
                         </div>
                         <div class="flex items-center">
                             <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
-                            <span>Scalable business growth</span>
+                            <span data-lang-en="Scalable business growth" data-lang-ro="Crestere scalabila a afacerii">Scalable business growth</span>
                         </div>
                     </div>
                 </div>
@@ -331,104 +500,76 @@
         </div>
     </section>
 
-
-
-
     <!-- Footer -->
     <footer id="contact" class="bg-purple-dark text-white py-12">
         <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8 mb-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <div class="flex items-center mb-4">
                         <img src="./img/cmg_nexa_logo.png" alt="CMG NEXA SRL" class="w-12 h-12 rounded-full object-cover mr-3">
                         <h4 class="text-xl font-bold">CMG NEXA SRL</h4>
                     </div>
-                    <p class="text-gray-300 text-sm">Complete IT solutions that streamline operations and accelerate growth.</p>
+                    <p class="text-gray-300 text-sm" data-lang-en="Complete IT solutions that streamline operations and accelerate growth." data-lang-ro="Solutii IT complete care optimizeaza operatiunile si accelereaza cresterea.">Complete IT solutions that streamline operations and accelerate growth.</p>
+                    <div class="mt-4">
+                        <img src="./img/odoo/odoo_ready_partners_rgb.svg" alt="Odoo Ready Partner" class="h-10 partner-badge">
+                    </div>
                 </div>
                 <div>
-                    <h5 class="text-lg font-semibold mb-4">Quick Links</h5>
+                    <h5 class="text-lg font-semibold mb-4" data-lang-en="Quick Links" data-lang-ro="Link-uri Rapide">Quick Links</h5>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
-                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Services" data-lang-ro="Servicii">Services</a></li>
+                        <li><a href="odoo.html" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Odoo Solutions" data-lang-ro="Solutii Odoo">Odoo Solutions</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors" data-lang-en="About Us" data-lang-ro="Despre Noi">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Contact" data-lang-ro="Contact">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h5 class="text-lg font-semibold mb-4">Contact Info</h5>
-                    <div class="text-sm text-gray-300 space-y-1">
-                        <p>Cleja, Bacau (Romania)</p>
-                        <p>+40 712368452</p>
-                        <p>administration@cmgnexa.com</p>
-                        <p>RO50932930</p>
+                    <h5 class="text-lg font-semibold mb-4" data-lang-en="Odoo Services" data-lang-ro="Servicii Odoo">Odoo Services</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="odoo.html" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Implementation" data-lang-ro="Implementare">Implementation</a></li>
+                        <li><a href="odoo.html" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Customization" data-lang-ro="Personalizare">Customization</a></li>
+                        <li><a href="odoo.html" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Training" data-lang-ro="Instruire">Training</a></li>
+                        <li><a href="odoo.html" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Support" data-lang-ro="Suport">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4" data-lang-en="Contact Info" data-lang-ro="Informatii Contact">Contact Info</h5>
+                    <div class="text-sm text-gray-300 space-y-2">
+                        <p class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Cleja, Bacau (Romania)
+                        </p>
+                        <p class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            +40 712368452
+                        </p>
+                        <p class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            office@cmgnexa.com
+                        </p>
+                        <p class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            RO50932930
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="border-t border-purple-medium pt-6 text-center">
-                <p class="text-sm text-gray-300">&copy; 2025 CMG NEXA SRL. All rights reserved.</p>
+                <p class="text-sm text-gray-300" data-lang-en="&copy; 2025 CMG NEXA SRL. All rights reserved." data-lang-ro="&copy; 2025 CMG NEXA SRL. Toate drepturile rezervate.">&copy; 2025 CMG NEXA SRL. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
-    <script>
-        // Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuIcon = document.getElementById('menu-icon');
-            const closeIcon = document.getElementById('close-icon');
-
-            if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', function() {
-                    const isHidden = mobileMenu.classList.contains('hidden');
-                    
-                    if (isHidden) {
-                        // Show menu
-                        mobileMenu.classList.remove('hidden');
-                        menuIcon.classList.add('hidden');
-                        closeIcon.classList.remove('hidden');
-                    } else {
-                        // Hide menu
-                        mobileMenu.classList.add('hidden');
-                        menuIcon.classList.remove('hidden');
-                        closeIcon.classList.add('hidden');
-                    }
-                });
-
-                // Close menu when clicking on a link
-                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-                mobileMenuLinks.forEach(link => {
-                    link.addEventListener('click', function() {
-                        mobileMenu.classList.add('hidden');
-                        menuIcon.classList.remove('hidden');
-                        closeIcon.classList.add('hidden');
-                    });
-                });
-
-                // Close menu when clicking outside
-                document.addEventListener('click', function(e) {
-                    if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
-                        mobileMenu.classList.add('hidden');
-                        menuIcon.classList.remove('hidden');
-                        closeIcon.classList.add('hidden');
-                    }
-                });
-            }
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

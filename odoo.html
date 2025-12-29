@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odoo Partner Romania - CMG NEXA SRL | Official Odoo Implementation Partner</title>
+    <meta name="description" content="CMG NEXA SRL is an Official Odoo Partner in Romania. Complete Odoo ERP implementation, customization, training, and support services for your business.">
+    <meta name="keywords" content="Odoo Partner Romania, Odoo ERP, Odoo implementation, Odoo customization, Odoo training, Odoo support, CMG NEXA">
+    <meta name="author" content="CMG NEXA SRL">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cmgnexa.com/odoo.html">
+    <meta property="og:title" content="Odoo Partner Romania - CMG NEXA SRL">
+    <meta property="og:description" content="Official Odoo Partner in Romania. Complete Odoo ERP implementation, customization, training, and support services.">
+    <meta property="og:image" content="https://cmgnexa.com/img/odoo/odoo_ready_partners_rgb.svg">
+    <meta property="og:site_name" content="CMG NEXA SRL">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://cmgnexa.com/odoo.html">
+    <meta property="twitter:title" content="Odoo Partner Romania - CMG NEXA SRL">
+    <meta property="twitter:description" content="Official Odoo Partner in Romania. Complete Odoo ERP implementation, customization, training, and support services.">
+
+    <link rel="icon" type="image/png" href="./img/cmg_nexa_logo.png">
+    <link rel="apple-touch-icon" href="./img/cmg_nexa_logo.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'purple-dark': '#49326b',
+                        'purple-medium': '#4C1D95',
+                        'purple-light': '#7C3AED',
+                        'odoo-purple': '#714B67'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-white text-gray-900">
+    <header class="bg-purple-dark shadow-lg fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-2 sm:space-x-4">
+                    <img src="./img/cmg_nexa_logo.png" alt="CMG NEXA SRL" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover">
+                    <h1 class="text-white text-lg sm:text-xl lg:text-2xl font-bold">CMG NEXA SRL</h1>
+                </a>
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                    <a href="index.html#services" class="text-white hover:text-purple-light transition-colors" data-lang-en="Services" data-lang-ro="Servicii">Services</a>
+                    <a href="odoo.html" class="text-purple-light font-semibold">Odoo</a>
+                    <a href="index.html#about" class="text-white hover:text-purple-light transition-colors" data-lang-en="About" data-lang-ro="Despre Noi">About</a>
+                    <a href="contact.html" class="text-white hover:text-purple-light transition-colors" data-lang-en="Contact" data-lang-ro="Contact">Contact</a>
+                    <a href="contact.html" class="bg-white text-purple-dark px-3 lg:px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm lg:text-base btn-primary" data-lang-en="Get In Touch" data-lang-ro="Contacteaza-ne">Get In Touch</a>
+                    <!-- Language Switcher with Flags -->
+                    <div class="flex items-center space-x-2 ml-4 border-l border-white/30 pl-4">
+                        <button onclick="setLanguage('en')" class="lang-btn hover:opacity-80 transition-opacity" data-lang="en" title="English">
+                            <span class="text-xl">🇬🇧</span>
+                        </button>
+                        <span class="text-white/50">|</span>
+                        <button onclick="setLanguage('ro')" class="lang-btn hover:opacity-80 transition-opacity opacity-60" data-lang="ro" title="Romana">
+                            <span class="text-xl">🇷🇴</span>
+                        </button>
+                    </div>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-white p-2">
+                    <svg id="menu-icon" class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="close-icon" class="w-5 h-5 sm:w-6 sm:h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="md:hidden hidden bg-purple-dark border-t border-white/20 mt-3">
+                <div class="px-4 py-4 space-y-4">
+                    <a href="index.html#services" class="block text-white hover:text-purple-light transition-colors py-2" data-lang-en="Services" data-lang-ro="Servicii">Services</a>
+                    <a href="odoo.html" class="block text-purple-light font-semibold py-2">Odoo</a>
+                    <a href="index.html#about" class="block text-white hover:text-purple-light transition-colors py-2" data-lang-en="About" data-lang-ro="Despre Noi">About</a>
+                    <a href="contact.html" class="block text-white hover:text-purple-light transition-colors py-2" data-lang-en="Contact" data-lang-ro="Contact">Contact</a>
+                    <a href="contact.html" class="block bg-white text-purple-dark px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center" data-lang-en="Get In Touch" data-lang-ro="Contacteaza-ne">Get In Touch</a>
+                    <!-- Mobile Language Switcher with Flags -->
+                    <div class="flex items-center justify-center space-x-4 pt-4 border-t border-white/20">
+                        <button onclick="setLanguage('en')" class="lang-btn flex items-center space-x-2 hover:opacity-80 transition-opacity px-3 py-1 rounded" data-lang="en">
+                            <span class="text-xl">🇬🇧</span>
+                            <span class="text-white text-sm">English</span>
+                        </button>
+                        <button onclick="setLanguage('ro')" class="lang-btn flex items-center space-x-2 hover:opacity-80 transition-opacity opacity-60 px-3 py-1 rounded" data-lang="ro">
+                            <span class="text-xl">🇷🇴</span>
+                            <span class="text-white text-sm">Romana</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="bg-gradient-to-br from-purple-dark to-purple-medium text-white min-h-screen flex items-center py-8 sm:py-12 pt-24">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div class="text-center lg:text-left order-2 lg:order-1">
+                    <div class="mb-6 flex justify-center lg:justify-start">
+                        <div class="bg-white rounded-xl p-4 inline-block partner-badge">
+                            <img src="./img/odoo/odoo_ready_partners_rgb.svg" alt="Odoo Ready Partner" class="h-16 sm:h-20">
+                        </div>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 animate-fade-in-up">
+                        <span data-lang-en="Official Odoo Partner" data-lang-ro="Partener Oficial Odoo">Official Odoo Partner</span><br><span class="text-yellow-300 font-extrabold" data-lang-en="in Romania" data-lang-ro="in Romania">in Romania</span>
+                    </h2>
+                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 leading-relaxed animate-fade-in-up animate-delay-100" data-lang-en="Transform your business with the world's most complete ERP solution. Full implementation, customization, training, and support." data-lang-ro="Transformati afacerea cu cea mai completa solutie ERP din lume. Implementare completa, personalizare, instruire si suport.">
+                        Transform your business with the world's most complete ERP solution. Full implementation, customization, training, and support.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start animate-fade-in-up animate-delay-200">
+                        <a href="contact.html" class="bg-white text-purple-dark px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center w-full sm:w-auto btn-primary" data-lang-en="Request a Demo" data-lang-ro="Solicita un Demo">
+                            Request a Demo
+                        </a>
+                        <a href="#services" class="border-2 border-white text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-dark transition-colors text-center w-full sm:w-auto" data-lang-en="Our Services" data-lang-ro="Serviciile Noastre">
+                            Our Services
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center lg:justify-end order-1 lg:order-2">
+                    <div class="w-full max-w-md lg:max-w-lg animate-float">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                            <div class="bg-white rounded-lg overflow-hidden shadow-2xl">
+                                <div class="bg-gray-100 px-4 py-2 flex items-center space-x-2">
+                                    <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+                                    <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                                    <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                                </div>
+                                <img src="https://odoocdn.com/openerp_website/static/src/img/apps/crm/hero_image.webp" alt="Odoo CRM Dashboard" class="w-full h-auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-purple-dark mb-6" data-lang-en="What is Odoo?" data-lang-ro="Ce este Odoo?">What is Odoo?</h3>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-lang-en="Odoo is a complete suite of business applications covering all your company needs: CRM, eCommerce, accounting, inventory, point of sale, project management, and more." data-lang-ro="Odoo este o suita completa de aplicatii de afaceri care acopera toate nevoile companiei: CRM, eCommerce, contabilitate, inventar, punct de vanzare, managementul proiectelor si multe altele.">
+                    Odoo is a complete suite of business applications covering all your company needs: CRM, eCommerce, accounting, inventory, point of sale, project management, and more.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="text-5xl font-bold text-purple-dark mb-2">12M+</div>
+                    <div class="text-gray-600" data-lang-en="Users Worldwide" data-lang-ro="Utilizatori in Lume">Users Worldwide</div>
+                </div>
+                <div class="text-center p-6">
+                    <div class="text-5xl font-bold text-purple-dark mb-2">82+</div>
+                    <div class="text-gray-600" data-lang-en="Integrated Apps" data-lang-ro="Aplicatii Integrate">Integrated Apps</div>
+                </div>
+                <div class="text-center p-6">
+                    <div class="text-5xl font-bold text-purple-dark mb-2">50K+</div>
+                    <div class="text-gray-600" data-lang-en="Third-Party Apps" data-lang-ro="Aplicatii Terte">Third-Party Apps</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center mb-16 text-purple-dark" data-lang-en="Our Odoo Services" data-lang-ro="Serviciile Noastre Odoo">Our Odoo Services</h3>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg service-card border-l-4 border-purple-light">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-16 h-16 bg-purple-light rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold text-purple-dark mb-3" data-lang-en="Implementation" data-lang-ro="Implementare">Implementation</h4>
+                            <p class="text-gray-600 mb-4" data-lang-en="Complete Odoo deployment tailored to your business processes and requirements." data-lang-ro="Implementare completa Odoo adaptata proceselor si cerintelor afacerii dumneavoastra.">Complete Odoo deployment tailored to your business processes and requirements.</p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-center"><span class="w-2 h-2 bg-purple-light rounded-full mr-3"></span><span data-lang-en="Business process analysis" data-lang-ro="Analiza proceselor de afaceri">Business process analysis</span></li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-purple-light rounded-full mr-3"></span><span data-lang-en="System configuration" data-lang-ro="Configurarea sistemului">System configuration</span></li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-purple-light rounded-full mr-3"></span><span data-lang-en="Data migration" data-lang-ro="Migrarea datelor">Data migration</span></li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-purple-light rounded-full mr-3"></span><span data-lang-en="Go-live support" data-lang-ro="Suport la lansare">Go-live support</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg service-card border-l-4 border-purple-light">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-16 h-16 bg-purple-light rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold text-purple-dark mb-3" data-lang-en="Customization" data-lang-ro="Personalizare">Customization</h4>
+                            <p class="text-gray-600 mb-4" data-lang-en="Tailor Odoo to your unique business needs with custom modules and features." data-lang-ro="Adaptati Odoo la nevoile unice ale afacerii cu module si functionalitati personalizate.">Tailor Odoo to your unique business needs with custom modules and features.</p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-center"><span class="w-2 h-2 bg-purple-light rounded-full mr-3"></span><span data-lang-en="Custom module development" data-lang-ro="Dezvoltare module personalizate">Custom module development</span></li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-purple-light rounded-full mr-3"></span><span data-lang-en="Workflow automation" data-lang-ro="Automatizarea fluxurilor">Workflow automation</span></li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-purple-light rounded-full mr-3"></span><span data-lang-en="Report customization" data-lang-ro="Personalizarea rapoartelor">Report customization</span></li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-purple-light rounded-full mr-3"></span><span data-lang-en="Third-party integrations" data-lang-ro="Integrari cu terti">Third-party integrations</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg service-card border-l-4 border-purple-light">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-16 h-16 bg-purple-light rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold text-purple-dark mb-3" data-lang-en="Training" data-lang-ro="Instruire">Training</h4>
+                            <p class="text-gray-600 mb-4" data-lang-en="Comprehensive training programs to ensure your team masters Odoo effectively." data-lang-ro="Programe de instruire complete pentru a va asigura ca echipa stapaneste Odoo eficient.">Comprehensive training programs to ensure your team masters Odoo effectively.</p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-center"><span class="w-2 h-2 bg-purple-light rounded-full mr-3"></span><span data-lang-en="User training sessions" data-lang-ro="Sesiuni de instruire utilizatori">User training sessions</span></li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-purple-light rounded-full mr-3"></span><span data-lang-en="Administrator training" data-lang-ro="Instruire administratori">Administrator training</span></li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-purple-light rounded-full mr-3"></span><span data-lang-en="Custom training materials" data-lang-ro="Materiale de instruire personalizate">Custom training materials</span></li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-purple-light rounded-full mr-3"></span><span data-lang-en="Ongoing education" data-lang-ro="Educatie continua">Ongoing education</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg service-card border-l-4 border-purple-light">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-16 h-16 bg-purple-light rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold text-purple-dark mb-3" data-lang-en="Support & Maintenance" data-lang-ro="Suport & Mentenanta">Support & Maintenance</h4>
+                            <p class="text-gray-600 mb-4" data-lang-en="Reliable ongoing support to keep your Odoo system running smoothly." data-lang-ro="Suport continuu de incredere pentru a mentine sistemul Odoo functional.">Reliable ongoing support to keep your Odoo system running smoothly.</p>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-center"><span class="w-2 h-2 bg-purple-light rounded-full mr-3"></span><span data-lang-en="24/7 technical support" data-lang-ro="Suport tehnic 24/7">24/7 technical support</span></li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-purple-light rounded-full mr-3"></span><span data-lang-en="System updates & upgrades" data-lang-ro="Actualizari si upgrade-uri">System updates & upgrades</span></li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-purple-light rounded-full mr-3"></span><span data-lang-en="Performance optimization" data-lang-ro="Optimizarea performantei">Performance optimization</span></li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-purple-light rounded-full mr-3"></span><span data-lang-en="Bug fixes & troubleshooting" data-lang-ro="Rezolvarea erorilor">Bug fixes & troubleshooting</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center mb-6 text-purple-dark" data-lang-en="Odoo Applications" data-lang-ro="Aplicatii Odoo">Odoo Applications</h3>
+            <p class="text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto" data-lang-en="A complete suite of integrated business apps to manage every aspect of your company" data-lang-ro="O suita completa de aplicatii de afaceri integrate pentru a gestiona fiecare aspect al companiei">
+                A complete suite of integrated business apps to manage every aspect of your company
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md text-center service-card">
+                    <img src="https://download.odoocdn.com/icons/crm/static/description/icon.svg" alt="CRM" class="w-16 h-16 mx-auto mb-4">
+                    <h5 class="font-semibold text-purple-dark">CRM</h5>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md text-center service-card">
+                    <img src="https://download.odoocdn.com/icons/sale/static/description/icon.svg" alt="Sales" class="w-16 h-16 mx-auto mb-4">
+                    <h5 class="font-semibold text-purple-dark">Sales</h5>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md text-center service-card">
+                    <img src="https://download.odoocdn.com/icons/stock/static/description/icon.svg" alt="Inventory" class="w-16 h-16 mx-auto mb-4">
+                    <h5 class="font-semibold text-purple-dark">Inventory</h5>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md text-center service-card">
+                    <img src="https://download.odoocdn.com/icons/accountant/static/description/icon.svg" alt="Accounting" class="w-16 h-16 mx-auto mb-4">
+                    <h5 class="font-semibold text-purple-dark">Accounting</h5>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md text-center service-card">
+                    <img src="https://download.odoocdn.com/icons/hr/static/description/icon.svg" alt="Employees" class="w-16 h-16 mx-auto mb-4">
+                    <h5 class="font-semibold text-purple-dark">Employees</h5>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md text-center service-card">
+                    <img src="https://download.odoocdn.com/icons/mrp/static/description/icon.svg" alt="Manufacturing" class="w-16 h-16 mx-auto mb-4">
+                    <h5 class="font-semibold text-purple-dark">Manufacturing</h5>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md text-center service-card">
+                    <img src="https://download.odoocdn.com/icons/project/static/description/icon.svg" alt="Project" class="w-16 h-16 mx-auto mb-4">
+                    <h5 class="font-semibold text-purple-dark">Project</h5>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md text-center service-card">
+                    <img src="https://download.odoocdn.com/icons/website/static/description/icon.svg" alt="Website" class="w-16 h-16 mx-auto mb-4">
+                    <h5 class="font-semibold text-purple-dark">Website</h5>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md text-center service-card">
+                    <img src="https://download.odoocdn.com/icons/website_sale/static/description/icon.svg" alt="eCommerce" class="w-16 h-16 mx-auto mb-4">
+                    <h5 class="font-semibold text-purple-dark">eCommerce</h5>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md text-center service-card">
+                    <img src="https://download.odoocdn.com/icons/point_of_sale/static/description/icon.svg" alt="Point of Sale" class="w-16 h-16 mx-auto mb-4">
+                    <h5 class="font-semibold text-purple-dark">Point of Sale</h5>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md text-center service-card">
+                    <img src="https://download.odoocdn.com/icons/purchase/static/description/icon.svg" alt="Purchase" class="w-16 h-16 mx-auto mb-4">
+                    <h5 class="font-semibold text-purple-dark">Purchase</h5>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md text-center service-card">
+                    <img src="https://download.odoocdn.com/icons/helpdesk/static/description/icon.svg" alt="Helpdesk" class="w-16 h-16 mx-auto mb-4">
+                    <h5 class="font-semibold text-purple-dark">Helpdesk</h5>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-4" data-lang-en="And many more applications available..." data-lang-ro="Si multe alte aplicatii disponibile...">And many more applications available...</p>
+                <a href="contact.html" class="inline-block bg-purple-dark text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-medium transition-colors btn-primary" data-lang-en="Discuss Your Needs" data-lang-ro="Discutati Nevoile">
+                    Discuss Your Needs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center mb-6 text-purple-dark" data-lang-en="Odoo in Action" data-lang-ro="Odoo in Actiune">Odoo in Action</h3>
+            <p class="text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto" data-lang-en="See how Odoo's intuitive interface transforms your business operations" data-lang-ro="Vedeti cum interfata intuitiva Odoo va transforma operatiunile de afaceri">
+                See how Odoo's intuitive interface transforms your business operations
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="screenshot-card rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://odoocdn.com/openerp_website/static/src/img/apps/crm/effortless_communication.webp" alt="Odoo CRM" class="w-full h-48 object-cover">
+                    <div class="p-4 bg-white">
+                        <h5 class="font-semibold text-purple-dark" data-lang-en="CRM Pipeline" data-lang-ro="Pipeline CRM">CRM Pipeline</h5>
+                        <p class="text-sm text-gray-600" data-lang-en="Track leads and opportunities with visual pipelines" data-lang-ro="Urmariti lead-uri si oportunitati cu pipeline-uri vizuale">Track leads and opportunities with visual pipelines</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-card rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://odoocdn.com/openerp_website/static/src/img/apps/crm/quotation.webp" alt="Odoo Quotations" class="w-full h-48 object-cover">
+                    <div class="p-4 bg-white">
+                        <h5 class="font-semibold text-purple-dark" data-lang-en="Professional Quotations" data-lang-ro="Oferte Profesionale">Professional Quotations</h5>
+                        <p class="text-sm text-gray-600" data-lang-en="Create and send beautiful quotes in seconds" data-lang-ro="Creati si trimiteti oferte frumoase in secunde">Create and send beautiful quotes in seconds</p>
+                    </div>
+                </div>
+
+                <div class="screenshot-card rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://odoocdn.com/openerp_website/static/src/img/apps/crm/reporting.webp" alt="Odoo Reporting" class="w-full h-48 object-cover">
+                    <div class="p-4 bg-white">
+                        <h5 class="font-semibold text-purple-dark" data-lang-en="Advanced Reporting" data-lang-ro="Raportare Avansata">Advanced Reporting</h5>
+                        <p class="text-sm text-gray-600" data-lang-en="Complete analytics and business intelligence" data-lang-ro="Analize complete si business intelligence">Complete analytics and business intelligence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gradient-to-br from-purple-dark to-purple-medium text-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-4xl font-bold text-center mb-16" data-lang-en="Why Choose CMG NEXA as Your Odoo Partner?" data-lang-ro="De Ce Sa Alegeti CMG NEXA ca Partener Odoo?">Why Choose CMG NEXA as Your Odoo Partner?</h3>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3" data-lang-en="Official Partner" data-lang-ro="Partener Oficial">Official Partner</h4>
+                    <p class="text-white/80" data-lang-en="Certified Odoo Ready Partner with direct access to Odoo resources and support" data-lang-ro="Partener Odoo Ready certificat cu acces direct la resursele si suportul Odoo">Certified Odoo Ready Partner with direct access to Odoo resources and support</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3" data-lang-en="Local Expertise" data-lang-ro="Expertiza Locala">Local Expertise</h4>
+                    <p class="text-white/80" data-lang-en="Deep understanding of Romanian business requirements and regulations" data-lang-ro="Intelegere profunda a cerintelor si reglementarilor de afaceri romanesti">Deep understanding of Romanian business requirements and regulations</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3" data-lang-en="24/7 Support" data-lang-ro="Suport 24/7">24/7 Support</h4>
+                    <p class="text-white/80" data-lang-en="Round-the-clock technical support to keep your business running" data-lang-ro="Suport tehnic non-stop pentru a mentine afacerea functionala">Round-the-clock technical support to keep your business running</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3" data-lang-en="Fast Deployment" data-lang-ro="Implementare Rapida">Fast Deployment</h4>
+                    <p class="text-white/80" data-lang-en="Efficient implementation process to get you up and running quickly" data-lang-ro="Proces de implementare eficient pentru a va pune rapid in functiune">Efficient implementation process to get you up and running quickly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-3xl mx-auto">
+                <img src="./img/odoo/odoo_ready_partners_rgb.svg" alt="Odoo Ready Partner" class="h-20 mx-auto mb-8 partner-badge">
+                <h3 class="text-4xl font-bold text-purple-dark mb-6" data-lang-en="Ready to Transform Your Business?" data-lang-ro="Pregatit sa Transformati Afacerea?">Ready to Transform Your Business?</h3>
+                <p class="text-xl text-gray-600 mb-8" data-lang-en="Contact us today for a free consultation and discover how Odoo can revolutionize your operations." data-lang-ro="Contactati-ne astazi pentru o consultatie gratuita si descoperiti cum Odoo poate revolutiona operatiunile.">
+                    Contact us today for a free consultation and discover how Odoo can revolutionize your operations.
+                </p>
+                <a href="contact.html" class="inline-block bg-purple-dark text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-purple-medium transition-colors btn-primary" data-lang-en="Schedule a Free Demo" data-lang-ro="Programeaza un Demo Gratuit">
+                    Schedule a Free Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-purple-dark text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="./img/cmg_nexa_logo.png" alt="CMG NEXA SRL" class="w-12 h-12 rounded-full object-cover mr-3">
+                        <h4 class="text-xl font-bold">CMG NEXA SRL</h4>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-4" data-lang-en="Official Odoo Partner in Romania. Complete ERP implementation and support." data-lang-ro="Partener Oficial Odoo in Romania. Implementare ERP completa si suport.">Official Odoo Partner in Romania. Complete ERP implementation and support.</p>
+                    <img src="./img/odoo/odoo_ready_partners_rgb.svg" alt="Odoo Ready Partner" class="h-10 partner-badge">
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4" data-lang-en="Quick Links" data-lang-ro="Link-uri Rapide">Quick Links</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Home" data-lang-ro="Acasa">Home</a></li>
+                        <li><a href="index.html#services" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Services" data-lang-ro="Servicii">Services</a></li>
+                        <li><a href="index.html#about" class="text-gray-300 hover:text-white transition-colors" data-lang-en="About Us" data-lang-ro="Despre Noi">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Contact" data-lang-ro="Contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4" data-lang-en="Odoo Services" data-lang-ro="Servicii Odoo">Odoo Services</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Implementation" data-lang-ro="Implementare">Implementation</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Customization" data-lang-ro="Personalizare">Customization</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Training" data-lang-ro="Instruire">Training</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Support" data-lang-ro="Suport">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-semibold mb-4" data-lang-en="Contact Info" data-lang-ro="Informatii Contact">Contact Info</h5>
+                    <div class="text-sm text-gray-300 space-y-2">
+                        <p class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Cleja, Bacau (Romania)
+                        </p>
+                        <p class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            +40 712368452
+                        </p>
+                        <p class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            office@cmgnexa.com
+                        </p>
+                        <p class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            RO50932930
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-purple-medium pt-6 text-center">
+                <p class="text-sm text-gray-300" data-lang-en="&copy; 2025 CMG NEXA SRL. All rights reserved. | Official Odoo Partner Romania" data-lang-ro="&copy; 2025 CMG NEXA SRL. Toate drepturile rezervate. | Partener Oficial Odoo Romania">&copy; 2025 CMG NEXA SRL. All rights reserved. | Official Odoo Partner Romania</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
