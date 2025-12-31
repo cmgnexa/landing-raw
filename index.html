@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CMG NEXA SRL - Transform Your Business with Complete IT Solutions</title>
     <meta name="description" content="CMG NEXA SRL provides complete IT solutions that streamline operations and accelerate growth. Custom software development, ERP systems, cybersecurity tools, and strategic IT consulting.">
-    <meta name="keywords" content="IT consulting, custom software, ERP systems, cybersecurity, software development, Romania, CMG NEXA, Odoo Partner">
+    <meta name="keywords" content="IT consulting, custom software, ERP systems, cybersecurity, software development, CMG NEXA, Odoo Partner, enterprise solutions, digital transformation">
     <meta name="author" content="CMG NEXA SRL">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://cmgnexa.com/">
+    <meta name="geo.region" content="RO">
+    <meta name="geo.placename" content="Bacau">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -50,6 +55,65 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "CMG NEXA SRL",
+        "url": "https://cmgnexa.com",
+        "logo": "https://cmgnexa.com/img/cmg_nexa_logo.png",
+        "description": "Complete IT solutions that streamline operations and accelerate growth. Custom software development, ERP systems, cybersecurity tools, and strategic IT consulting.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Cleja",
+            "addressRegion": "Bacau",
+            "addressCountry": "RO"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+40-712-368-452",
+            "contactType": "customer service",
+            "email": "office@cmgnexa.com",
+            "availableLanguage": ["English", "Romanian"]
+        },
+        "sameAs": []
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "CMG NEXA SRL",
+        "url": "https://cmgnexa.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://cmgnexa.com/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "CMG NEXA SRL",
+        "image": "https://cmgnexa.com/img/cmg_nexa_logo.png",
+        "url": "https://cmgnexa.com",
+        "telephone": "+40-712-368-452",
+        "email": "office@cmgnexa.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Cleja",
+            "addressRegion": "Bacau",
+            "addressCountry": "RO"
+        },
+        "priceRange": "$$",
+        "openingHours": "Mo-Fr 09:00-18:00",
+        "serviceType": ["IT Consulting", "Custom Software Development", "ERP Implementation", "Odoo Partner", "Web Development", "System Integration"]
+    }
+    </script>
 </head>
 <body class="bg-white text-gray-900">
     <!-- Header -->
@@ -61,15 +125,19 @@
                     <h1 class="text-white text-lg sm:text-xl lg:text-2xl font-bold">CMG NEXA SRL</h1>
                 </a>
                 <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
-                    <a href="#services" class="text-white hover:text-purple-light transition-colors" data-lang-en="Services" data-lang-ro="Servicii">Services</a>
+                    <a href="#services" class="text-white hover:text-purple-light transition-colors" data-lang-en="Services" data-lang-it="Servizi" data-lang-ro="Servicii">Services</a>
                     <a href="odoo.html" class="text-white hover:text-purple-light transition-colors">Odoo</a>
-                    <a href="#about" class="text-white hover:text-purple-light transition-colors" data-lang-en="About" data-lang-ro="Despre Noi">About</a>
-                    <a href="#contact" class="text-white hover:text-purple-light transition-colors" data-lang-en="Contact" data-lang-ro="Contact">Contact</a>
-                    <a href="#contact" class="bg-white text-purple-dark px-3 lg:px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm lg:text-base btn-primary" data-lang-en="Get In Touch" data-lang-ro="Contacteaza-ne">Get In Touch</a>
+                    <a href="#about" class="text-white hover:text-purple-light transition-colors" data-lang-en="About" data-lang-it="Chi Siamo" data-lang-ro="Despre Noi">About</a>
+                    <a href="#contact" class="text-white hover:text-purple-light transition-colors" data-lang-en="Contact" data-lang-it="Contatti" data-lang-ro="Contact">Contact</a>
+                    <a href="#contact" class="bg-white text-purple-dark px-3 lg:px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm lg:text-base btn-primary" data-lang-en="Get In Touch" data-lang-it="Contattaci" data-lang-ro="Contacteaza-ne">Get In Touch</a>
                     <!-- Language Switcher with Flags -->
                     <div class="flex items-center space-x-2 ml-4 border-l border-white/30 pl-4">
                         <button onclick="setLanguage('en')" class="lang-btn hover:opacity-80 transition-opacity" data-lang="en" title="English">
                             <span class="text-xl">🇬🇧</span>
+                        </button>
+                        <span class="text-white/50">|</span>
+                        <button onclick="setLanguage('it')" class="lang-btn hover:opacity-80 transition-opacity opacity-60" data-lang="it" title="Italiano">
+                            <span class="text-xl">🇮🇹</span>
                         </button>
                         <span class="text-white/50">|</span>
                         <button onclick="setLanguage('ro')" class="lang-btn hover:opacity-80 transition-opacity opacity-60" data-lang="ro" title="Romana">
@@ -90,20 +158,24 @@
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="md:hidden hidden bg-purple-dark border-t border-white/20 mt-3">
                 <div class="px-4 py-4 space-y-4">
-                    <a href="#services" class="block text-white hover:text-purple-light transition-colors py-2" data-lang-en="Services" data-lang-ro="Servicii">Services</a>
+                    <a href="#services" class="block text-white hover:text-purple-light transition-colors py-2" data-lang-en="Services" data-lang-it="Servizi" data-lang-ro="Servicii">Services</a>
                     <a href="odoo.html" class="block text-white hover:text-purple-light transition-colors py-2">Odoo</a>
-                    <a href="#about" class="block text-white hover:text-purple-light transition-colors py-2" data-lang-en="About" data-lang-ro="Despre Noi">About</a>
-                    <a href="#contact" class="block text-white hover:text-purple-light transition-colors py-2" data-lang-en="Contact" data-lang-ro="Contact">Contact</a>
-                    <a href="#contact" class="block bg-white text-purple-dark px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center" data-lang-en="Get In Touch" data-lang-ro="Contacteaza-ne">Get In Touch</a>
+                    <a href="#about" class="block text-white hover:text-purple-light transition-colors py-2" data-lang-en="About" data-lang-it="Chi Siamo" data-lang-ro="Despre Noi">About</a>
+                    <a href="#contact" class="block text-white hover:text-purple-light transition-colors py-2" data-lang-en="Contact" data-lang-it="Contatti" data-lang-ro="Contact">Contact</a>
+                    <a href="#contact" class="block bg-white text-purple-dark px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center" data-lang-en="Get In Touch" data-lang-it="Contattaci" data-lang-ro="Contacteaza-ne">Get In Touch</a>
                     <!-- Mobile Language Switcher with Flags -->
                     <div class="flex items-center justify-center space-x-4 pt-4 border-t border-white/20">
                         <button onclick="setLanguage('en')" class="lang-btn flex items-center space-x-2 hover:opacity-80 transition-opacity px-3 py-1 rounded" data-lang="en">
                             <span class="text-xl">🇬🇧</span>
-                            <span class="text-white text-sm">English</span>
+                            <span class="text-white text-sm">EN</span>
+                        </button>
+                        <button onclick="setLanguage('it')" class="lang-btn flex items-center space-x-2 hover:opacity-80 transition-opacity opacity-60 px-3 py-1 rounded" data-lang="it">
+                            <span class="text-xl">🇮🇹</span>
+                            <span class="text-white text-sm">IT</span>
                         </button>
                         <button onclick="setLanguage('ro')" class="lang-btn flex items-center space-x-2 hover:opacity-80 transition-opacity opacity-60 px-3 py-1 rounded" data-lang="ro">
                             <span class="text-xl">🇷🇴</span>
-                            <span class="text-white text-sm">Romana</span>
+                            <span class="text-white text-sm">RO</span>
                         </button>
                     </div>
                 </div>
@@ -116,15 +188,15 @@
         <div class="container mx-auto px-4 sm:px-6">
             <div class="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
                 <div class="text-center lg:text-left order-2 lg:order-1">
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 lg:mb-8 animate-fade-in-up" data-lang-en="Transform Your Business" data-lang-ro="Transforma-ti Afacerea">Transform Your Business</h2>
-                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 px-2 sm:px-0 leading-relaxed animate-fade-in-up animate-delay-100" data-lang-en="Complete IT solutions that streamline operations and accelerate growth." data-lang-ro="Solutii IT complete care optimizeaza operatiunile si accelereaza cresterea.">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 lg:mb-8 animate-fade-in-up" data-lang-en="Transform Your Business" data-lang-it="Trasforma il Tuo Business" data-lang-ro="Transforma-ti Afacerea">Transform Your Business</h2>
+                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 px-2 sm:px-0 leading-relaxed animate-fade-in-up animate-delay-100" data-lang-en="Complete IT solutions that streamline operations and accelerate growth." data-lang-it="Soluzioni IT complete che ottimizzano le operazioni e accelerano la crescita." data-lang-ro="Solutii IT complete care optimizeaza operatiunile si accelereaza cresterea.">
                         Complete IT solutions that streamline operations and accelerate growth.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start px-2 sm:px-0 animate-fade-in-up animate-delay-200">
-                        <a href="#contact" class="bg-white text-purple-dark px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center w-full sm:w-auto btn-primary" data-lang-en="Get Started" data-lang-ro="Incepe Acum">
+                        <a href="#contact" class="bg-white text-purple-dark px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center w-full sm:w-auto btn-primary" data-lang-en="Get Started" data-lang-it="Inizia Ora" data-lang-ro="Incepe Acum">
                             Get Started
                         </a>
-                        <a href="#services" class="border-2 border-white text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-dark transition-colors text-center w-full sm:w-auto" data-lang-en="Our Services" data-lang-ro="Serviciile Noastre">
+                        <a href="#services" class="border-2 border-white text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-dark transition-colors text-center w-full sm:w-auto" data-lang-en="Our Services" data-lang-it="I Nostri Servizi" data-lang-ro="Serviciile Noastre">
                             Our Services
                         </a>
                     </div>
@@ -200,33 +272,33 @@
                         <div class="flex items-center gap-4 mb-6">
                             <img src="./img/odoo/odoo_ready_partners_rgb.svg" alt="Odoo Ready Partner" class="h-16 md:h-20 partner-badge bg-white rounded-lg p-2">
                             <div>
-                                <span class="bg-white/20 text-sm px-3 py-1 rounded-full" data-lang-en="Official Partner" data-lang-ro="Partener Oficial">Official Partner</span>
+                                <span class="bg-white/20 text-sm px-3 py-1 rounded-full" data-lang-en="Official Partner" data-lang-it="Partner Ufficiale" data-lang-ro="Partener Oficial">Official Partner</span>
                             </div>
                         </div>
-                        <h3 class="text-3xl md:text-4xl font-bold mb-4" data-lang-en="Your Trusted Odoo Partner in Romania" data-lang-ro="Partenerul Dvs. de Incredere Odoo in Romania">Your Trusted Odoo Partner in Romania</h3>
-                        <p class="text-lg text-white/90 mb-6" data-lang-en="We provide complete Odoo ERP solutions: implementation, customization, training, and ongoing support. Transform your business with the world's most popular open-source ERP system." data-lang-ro="Oferim solutii complete Odoo ERP: implementare, personalizare, instruire si suport continuu. Transformati afacerea cu cel mai popular sistem ERP open-source din lume.">
+                        <h3 class="text-3xl md:text-4xl font-bold mb-4" data-lang-en="Your Trusted Odoo Partner" data-lang-it="Il Tuo Partner Odoo di Fiducia" data-lang-ro="Partenerul Dvs. de Incredere Odoo">Your Trusted Odoo Partner</h3>
+                        <p class="text-lg text-white/90 mb-6" data-lang-en="We provide complete Odoo ERP solutions: implementation, customization, training, and ongoing support. Transform your business with the world's most popular open-source ERP system." data-lang-it="Forniamo soluzioni Odoo ERP complete: implementazione, personalizzazione, formazione e supporto continuo. Trasforma la tua azienda con il sistema ERP open-source più popolare al mondo." data-lang-ro="Oferim solutii complete Odoo ERP: implementare, personalizare, instruire si suport continuu. Transformati afacerea cu cel mai popular sistem ERP open-source din lume.">
                             We provide complete Odoo ERP solutions: implementation, customization, training, and ongoing support. Transform your business with the world's most popular open-source ERP system.
                         </p>
                         <div class="grid grid-cols-2 gap-4 mb-8">
                             <div class="bg-white/10 rounded-lg p-4 text-center">
                                 <div class="text-2xl font-bold">ERP</div>
-                                <div class="text-sm text-white/80" data-lang-en="Enterprise Resource Planning" data-lang-ro="Planificarea Resurselor">Enterprise Resource Planning</div>
+                                <div class="text-sm text-white/80" data-lang-en="Enterprise Resource Planning" data-lang-it="Pianificazione Risorse" data-lang-ro="Planificarea Resurselor">Enterprise Resource Planning</div>
                             </div>
                             <div class="bg-white/10 rounded-lg p-4 text-center">
                                 <div class="text-2xl font-bold">CRM</div>
-                                <div class="text-sm text-white/80" data-lang-en="Customer Management" data-lang-ro="Managementul Clientilor">Customer Management</div>
+                                <div class="text-sm text-white/80" data-lang-en="Customer Management" data-lang-it="Gestione Clienti" data-lang-ro="Managementul Clientilor">Customer Management</div>
                             </div>
                             <div class="bg-white/10 rounded-lg p-4 text-center">
                                 <div class="text-2xl font-bold">HR</div>
-                                <div class="text-sm text-white/80" data-lang-en="Human Resources" data-lang-ro="Resurse Umane">Human Resources</div>
+                                <div class="text-sm text-white/80" data-lang-en="Human Resources" data-lang-it="Risorse Umane" data-lang-ro="Resurse Umane">Human Resources</div>
                             </div>
                             <div class="bg-white/10 rounded-lg p-4 text-center">
                                 <div class="text-2xl font-bold">+40</div>
-                                <div class="text-sm text-white/80" data-lang-en="Business Apps" data-lang-ro="Aplicatii Business">Business Apps</div>
+                                <div class="text-sm text-white/80" data-lang-en="Business Apps" data-lang-it="App Business" data-lang-ro="Aplicatii Business">Business Apps</div>
                             </div>
                         </div>
                         <a href="odoo.html" class="inline-flex items-center bg-white text-purple-dark px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors btn-primary">
-                            <span data-lang-en="Discover Odoo Solutions" data-lang-ro="Descopera Solutiile Odoo">Discover Odoo Solutions</span>
+                            <span data-lang-en="Discover Odoo Solutions" data-lang-it="Scopri le Soluzioni Odoo" data-lang-ro="Descopera Solutiile Odoo">Discover Odoo Solutions</span>
                             <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                             </svg>
@@ -234,7 +306,7 @@
                     </div>
                     <div class="hidden lg:block">
                         <div class="bg-white/10 rounded-2xl p-6 backdrop-blur-sm border border-white/20">
-                            <h4 class="text-white text-xl font-semibold mb-4" data-lang-en="Odoo Modules We Implement" data-lang-ro="Module Odoo pe care le Implementam">Odoo Modules We Implement</h4>
+                            <h4 class="text-white text-xl font-semibold mb-4" data-lang-en="Odoo Modules We Implement" data-lang-it="Moduli Odoo che Implementiamo" data-lang-ro="Module Odoo pe care le Implementam">Odoo Modules We Implement</h4>
                             <div class="space-y-3">
                                 <div class="flex items-center text-white/90">
                                     <svg class="w-5 h-5 mr-3 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
@@ -242,15 +314,15 @@
                                 </div>
                                 <div class="flex items-center text-white/90">
                                     <svg class="w-5 h-5 mr-3 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                    <span data-lang-en="Inventory & Warehouse" data-lang-ro="Inventar & Depozit">Inventory & Warehouse</span>
+                                    <span data-lang-en="Inventory & Warehouse" data-lang-it="Inventario & Magazzino" data-lang-ro="Inventar & Depozit">Inventory & Warehouse</span>
                                 </div>
                                 <div class="flex items-center text-white/90">
                                     <svg class="w-5 h-5 mr-3 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                    <span data-lang-en="Accounting & Finance" data-lang-ro="Contabilitate & Finante">Accounting & Finance</span>
+                                    <span data-lang-en="Accounting & Finance" data-lang-it="Contabilità & Finanza" data-lang-ro="Contabilitate & Finante">Accounting & Finance</span>
                                 </div>
                                 <div class="flex items-center text-white/90">
                                     <svg class="w-5 h-5 mr-3 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                    <span data-lang-en="Manufacturing & MRP" data-lang-ro="Productie & MRP">Manufacturing & MRP</span>
+                                    <span data-lang-en="Manufacturing & MRP" data-lang-it="Produzione & MRP" data-lang-ro="Productie & MRP">Manufacturing & MRP</span>
                                 </div>
                                 <div class="flex items-center text-white/90">
                                     <svg class="w-5 h-5 mr-3 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
@@ -258,11 +330,11 @@
                                 </div>
                                 <div class="flex items-center text-white/90">
                                     <svg class="w-5 h-5 mr-3 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                    <span data-lang-en="Project Management" data-lang-ro="Managementul Proiectelor">Project Management</span>
+                                    <span data-lang-en="Project Management" data-lang-it="Gestione Progetti" data-lang-ro="Managementul Proiectelor">Project Management</span>
                                 </div>
                                 <div class="flex items-center text-white/90">
                                     <svg class="w-5 h-5 mr-3 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                                    <span data-lang-en="Human Resources" data-lang-ro="Resurse Umane">Human Resources</span>
+                                    <span data-lang-en="Human Resources" data-lang-it="Risorse Umane" data-lang-ro="Resurse Umane">Human Resources</span>
                                 </div>
                             </div>
                         </div>
@@ -275,7 +347,7 @@
     <!-- Services Section -->
     <section id="services" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
-            <h3 class="text-4xl font-bold text-center mb-16 text-purple-dark" data-lang-en="Our Solutions" data-lang-ro="Solutiile Noastre">Our Solutions</h3>
+            <h3 class="text-4xl font-bold text-center mb-16 text-purple-dark" data-lang-en="Our Solutions" data-lang-it="Le Nostre Soluzioni" data-lang-ro="Solutiile Noastre">Our Solutions</h3>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Custom Software Development -->
@@ -285,8 +357,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                         </svg>
                     </div>
-                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="Custom Software Development" data-lang-ro="Dezvoltare Software Personalizat">Custom Software Development</h5>
-                    <p class="text-gray-600" data-lang-en="Tailored software solutions designed specifically for your business needs and requirements." data-lang-ro="Solutii software personalizate, concepute special pentru nevoile si cerintele afacerii dumneavoastra.">Tailored software solutions designed specifically for your business needs and requirements.</p>
+                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="Custom Software Development" data-lang-it="Sviluppo Software Personalizzato" data-lang-ro="Dezvoltare Software Personalizat">Custom Software Development</h5>
+                    <p class="text-gray-600" data-lang-en="Tailored software solutions designed specifically for your business needs and requirements." data-lang-it="Soluzioni software su misura progettate specificamente per le esigenze della tua azienda." data-lang-ro="Solutii software personalizate, concepute special pentru nevoile si cerintele afacerii dumneavoastra.">Tailored software solutions designed specifically for your business needs and requirements.</p>
                 </div>
 
                 <!-- ERP & CRM Systems -->
@@ -296,8 +368,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
                         </svg>
                     </div>
-                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="ERP & CRM Systems" data-lang-ro="Sisteme ERP & CRM">ERP & CRM Systems</h5>
-                    <p class="text-gray-600" data-lang-en="Complete enterprise resource planning and customer relationship management solutions." data-lang-ro="Solutii complete de planificare a resurselor si managementul relatiilor cu clientii.">Complete enterprise resource planning and customer relationship management solutions.</p>
+                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="ERP & CRM Systems" data-lang-it="Sistemi ERP & CRM" data-lang-ro="Sisteme ERP & CRM">ERP & CRM Systems</h5>
+                    <p class="text-gray-600" data-lang-en="Complete enterprise resource planning and customer relationship management solutions." data-lang-it="Soluzioni complete per la pianificazione delle risorse e la gestione delle relazioni con i clienti." data-lang-ro="Solutii complete de planificare a resurselor si managementul relatiilor cu clientii.">Complete enterprise resource planning and customer relationship management solutions.</p>
                 </div>
 
                 <!-- Software Support & Maintenance -->
@@ -307,8 +379,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
                         </svg>
                     </div>
-                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="Software Support & Maintenance" data-lang-ro="Suport & Mentenanta Software">Software Support & Maintenance</h5>
-                    <p class="text-gray-600" data-lang-en="24/7 support, maintenance, and optimization services for your software solutions." data-lang-ro="Suport 24/7, mentenanta si servicii de optimizare pentru solutiile dumneavoastra software.">24/7 support, maintenance, and optimization services for your software solutions.</p>
+                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="Software Support & Maintenance" data-lang-it="Supporto & Manutenzione Software" data-lang-ro="Suport & Mentenanta Software">Software Support & Maintenance</h5>
+                    <p class="text-gray-600" data-lang-en="24/7 support, maintenance, and optimization services for your software solutions." data-lang-it="Supporto 24/7, manutenzione e servizi di ottimizzazione per le tue soluzioni software." data-lang-ro="Suport 24/7, mentenanta si servicii de optimizare pentru solutiile dumneavoastra software.">24/7 support, maintenance, and optimization services for your software solutions.</p>
                 </div>
 
                 <!-- System Integration -->
@@ -318,8 +390,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
                         </svg>
                     </div>
-                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="System Integration" data-lang-ro="Integrare Sisteme">System Integration</h5>
-                    <p class="text-gray-600" data-lang-en="Connect your existing systems for improved workflow and data consistency." data-lang-ro="Conectati sistemele existente pentru un flux de lucru imbunatatit si consistenta datelor.">Connect your existing systems for improved workflow and data consistency.</p>
+                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="System Integration" data-lang-it="Integrazione Sistemi" data-lang-ro="Integrare Sisteme">System Integration</h5>
+                    <p class="text-gray-600" data-lang-en="Connect your existing systems for improved workflow and data consistency." data-lang-it="Collega i tuoi sistemi esistenti per un flusso di lavoro migliore e coerenza dei dati." data-lang-ro="Conectati sistemele existente pentru un flux de lucru imbunatatit si consistenta datelor.">Connect your existing systems for improved workflow and data consistency.</p>
                 </div>
 
                 <!-- Strategic IT Consulting -->
@@ -329,8 +401,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
                         </svg>
                     </div>
-                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="Strategic IT Consulting" data-lang-ro="Consultanta IT Strategica">Strategic IT Consulting</h5>
-                    <p class="text-gray-600" data-lang-en="Strategic technology guidance to optimize your business processes and digital transformation." data-lang-ro="Ghidare tehnologica strategica pentru optimizarea proceselor de afaceri si transformare digitala.">Strategic technology guidance to optimize your business processes and digital transformation.</p>
+                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="Strategic IT Consulting" data-lang-it="Consulenza IT Strategica" data-lang-ro="Consultanta IT Strategica">Strategic IT Consulting</h5>
+                    <p class="text-gray-600" data-lang-en="Strategic technology guidance to optimize your business processes and digital transformation." data-lang-it="Guida tecnologica strategica per ottimizzare i processi aziendali e la trasformazione digitale." data-lang-ro="Ghidare tehnologica strategica pentru optimizarea proceselor de afaceri si transformare digitala.">Strategic technology guidance to optimize your business processes and digital transformation.</p>
                 </div>
 
                 <!-- Web Development -->
@@ -340,8 +412,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
                         </svg>
                     </div>
-                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="Web Development" data-lang-ro="Dezvoltare Web">Web Development</h5>
-                    <p class="text-gray-600" data-lang-en="Custom web applications using modern technologies: Golang, C#, Python, and responsive design." data-lang-ro="Aplicatii web personalizate folosind tehnologii moderne: Golang, C#, Python si design responsive.">Custom web applications using modern technologies: Golang, C#, Python, and responsive design.</p>
+                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="Web Development" data-lang-it="Sviluppo Web" data-lang-ro="Dezvoltare Web">Web Development</h5>
+                    <p class="text-gray-600" data-lang-en="Custom web applications using modern technologies: Golang, C#, Python, and responsive design." data-lang-it="Applicazioni web personalizzate con tecnologie moderne: Golang, C#, Python e design responsive." data-lang-ro="Aplicatii web personalizate folosind tehnologii moderne: Golang, C#, Python si design responsive.">Custom web applications using modern technologies: Golang, C#, Python, and responsive design.</p>
                 </div>
 
                 <!-- E-Commerce Platforms -->
@@ -351,8 +423,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
                         </svg>
                     </div>
-                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="E-Commerce Platforms" data-lang-ro="Platforme E-Commerce">E-Commerce Platforms</h5>
-                    <p class="text-gray-600" data-lang-en="Complete online store development and maintenance for digital commerce success." data-lang-ro="Dezvoltare si mentenanta completa a magazinelor online pentru succes in comertul digital.">Complete online store development and maintenance for digital commerce success.</p>
+                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="E-Commerce Platforms" data-lang-it="Piattaforme E-Commerce" data-lang-ro="Platforme E-Commerce">E-Commerce Platforms</h5>
+                    <p class="text-gray-600" data-lang-en="Complete online store development and maintenance for digital commerce success." data-lang-it="Sviluppo e manutenzione completa di negozi online per il successo nel commercio digitale." data-lang-ro="Dezvoltare si mentenanta completa a magazinelor online pentru succes in comertul digital.">Complete online store development and maintenance for digital commerce success.</p>
                 </div>
 
                 <!-- Online Presence -->
@@ -362,8 +434,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                         </svg>
                     </div>
-                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="Online Presence" data-lang-ro="Prezenta Online">Online Presence</h5>
-                    <p class="text-gray-600" data-lang-en="Professional web presence, digital marketing, and online advertising solutions." data-lang-ro="Prezenta web profesionala, marketing digital si solutii de publicitate online.">Professional web presence, digital marketing, and online advertising solutions.</p>
+                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="Online Presence" data-lang-it="Presenza Online" data-lang-ro="Prezenta Online">Online Presence</h5>
+                    <p class="text-gray-600" data-lang-en="Professional web presence, digital marketing, and online advertising solutions." data-lang-it="Presenza web professionale, marketing digitale e soluzioni pubblicitarie online." data-lang-ro="Prezenta web profesionala, marketing digital si solutii de publicitate online.">Professional web presence, digital marketing, and online advertising solutions.</p>
                 </div>
 
                 <!-- Email & Collaboration -->
@@ -373,14 +445,14 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                         </svg>
                     </div>
-                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="Email & Collaboration" data-lang-ro="Email & Colaborare">Email & Collaboration</h5>
-                    <p class="text-gray-600" data-lang-en="Unified communications and email solutions to enhance team productivity and collaboration." data-lang-ro="Comunicatii unificate si solutii email pentru a imbunatati productivitatea si colaborarea echipei.">Unified communications and email solutions to enhance team productivity and collaboration.</p>
+                    <h5 class="text-xl font-semibold mb-4 text-purple-dark" data-lang-en="Email & Collaboration" data-lang-it="Email & Collaborazione" data-lang-ro="Email & Colaborare">Email & Collaboration</h5>
+                    <p class="text-gray-600" data-lang-en="Unified communications and email solutions to enhance team productivity and collaboration." data-lang-it="Comunicazioni unificate e soluzioni email per migliorare la produttività e la collaborazione del team." data-lang-ro="Comunicatii unificate si solutii email pentru a imbunatati productivitatea si colaborarea echipei.">Unified communications and email solutions to enhance team productivity and collaboration.</p>
                 </div>
             </div>
 
             <!-- Technologies Section -->
             <div class="mt-16">
-                <h4 class="text-2xl font-bold text-center mb-8 text-purple-dark" data-lang-en="Technologies We Work With" data-lang-ro="Tehnologii cu care Lucram">Technologies We Work With</h4>
+                <h4 class="text-2xl font-bold text-center mb-8 text-purple-dark" data-lang-en="Technologies We Work With" data-lang-it="Tecnologie con cui Lavoriamo" data-lang-ro="Tehnologii cu care Lucram">Technologies We Work With</h4>
                 <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 items-center justify-items-center">
                     <!-- Python -->
                     <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
@@ -430,9 +502,9 @@
                 <div class="flex flex-col md:flex-row items-center justify-center gap-6">
                     <img src="./img/odoo/odoo_ready_partners_rgb.svg" alt="Odoo Ready Partner" class="h-16 md:h-20 partner-badge">
                     <div class="text-center md:text-left">
-                        <h4 class="text-2xl font-bold mb-2" data-lang-en="Official Odoo Partner in Romania" data-lang-ro="Partener Oficial Odoo in Romania">Official Odoo Partner in Romania</h4>
-                        <p class="text-white/80 mb-4" data-lang-en="Complete Odoo ERP implementation, customization, and support services." data-lang-ro="Implementare completa Odoo ERP, personalizare si servicii de suport.">Complete Odoo ERP implementation, customization, and support services.</p>
-                        <a href="odoo.html" class="inline-block bg-white text-purple-dark px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors btn-primary" data-lang-en="Learn More" data-lang-ro="Afla Mai Mult">
+                        <h4 class="text-2xl font-bold mb-2" data-lang-en="Official Odoo Partner" data-lang-it="Partner Ufficiale Odoo" data-lang-ro="Partener Oficial Odoo">Official Odoo Partner</h4>
+                        <p class="text-white/80 mb-4" data-lang-en="Complete Odoo ERP implementation, customization, and support services." data-lang-it="Implementazione completa Odoo ERP, personalizzazione e servizi di supporto." data-lang-ro="Implementare completa Odoo ERP, personalizare si servicii de suport.">Complete Odoo ERP implementation, customization, and support services.</p>
+                        <a href="odoo.html" class="inline-block bg-white text-purple-dark px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors btn-primary" data-lang-en="Learn More" data-lang-it="Scopri di Più" data-lang-ro="Afla Mai Mult">
                             Learn More
                         </a>
                     </div>
@@ -446,53 +518,53 @@
         <div class="container mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h3 class="text-4xl font-bold mb-6 text-purple-dark" data-lang-en="About CMG NEXA" data-lang-ro="Despre CMG NEXA">About CMG NEXA</h3>
-                    <p class="text-lg text-gray-600 mb-6" data-lang-en="We are a young, dynamic IT company with 100% Romanian capital, founded to bring enterprise-level professionalism to a market segment often overlooked by multinational corporations." data-lang-ro="Suntem o companie IT tanara si dinamica cu capital 100% romanesc, fondata pentru a aduce profesionalism de nivel enterprise intr-un segment de piata adesea ignorat de corporatiile multinationale.">
-                        We are a young, dynamic IT company with 100% Romanian capital, founded to bring enterprise-level professionalism to a market segment often overlooked by multinational corporations.
+                    <h3 class="text-4xl font-bold mb-6 text-purple-dark" data-lang-en="About CMG NEXA" data-lang-it="Chi è CMG NEXA" data-lang-ro="Despre CMG NEXA">About CMG NEXA</h3>
+                    <p class="text-lg text-gray-600 mb-6" data-lang-en="We are a young, dynamic IT company born and raised in Romania, founded to bring enterprise-level professionalism to a market segment often overlooked by multinational corporations." data-lang-it="Siamo un'azienda IT giovane e dinamica, nata e cresciuta in Romania, fondata per portare professionalità di livello enterprise in un segmento di mercato spesso trascurato dalle multinazionali." data-lang-ro="Suntem o companie IT tanara si dinamica, nascuta si crescuta in Romania, fondata pentru a aduce profesionalism de nivel enterprise intr-un segment de piata adesea ignorat de corporatiile multinationale.">
+                        We are a young, dynamic IT company born and raised in Romania, founded to bring enterprise-level professionalism to a market segment often overlooked by multinational corporations.
                     </p>
-                    <p class="text-gray-600 mb-8" data-lang-en="Our team combines technical expertise with business acumen to create solutions that not only work today but scale for tomorrow's challenges. We believe in integrity, creativity, and responsibility, delivering results that exceed expectations." data-lang-ro="Echipa noastra combina expertiza tehnica cu viziunea de afaceri pentru a crea solutii care nu doar functioneaza astazi, dar se extind pentru provocarile de maine. Credem in integritate, creativitate si responsabilitate, livrand rezultate care depasesc asteptarile.">
+                    <p class="text-gray-600 mb-8" data-lang-en="Our team combines technical expertise with business acumen to create solutions that not only work today but scale for tomorrow's challenges. We believe in integrity, creativity, and responsibility, delivering results that exceed expectations." data-lang-it="Il nostro team combina competenza tecnica e visione aziendale per creare soluzioni che non solo funzionano oggi, ma scalano per le sfide di domani. Crediamo nell'integrità, creatività e responsabilità, offrendo risultati che superano le aspettative." data-lang-ro="Echipa noastra combina expertiza tehnica cu viziunea de afaceri pentru a crea solutii care nu doar functioneaza astazi, dar se extind pentru provocarile de maine. Credem in integritate, creativitate si responsabilitate, livrand rezultate care depasesc asteptarile.">
                         Our team combines technical expertise with business acumen to create solutions that not only work today but scale for tomorrow's challenges. We believe in integrity, creativity, and responsibility, delivering results that exceed expectations.
                     </p>
                     <div class="grid grid-cols-2 gap-6">
                         <div class="text-center">
                             <div class="text-3xl font-bold text-purple-dark mb-2">100%</div>
-                            <div class="text-sm text-gray-600" data-lang-en="Romanian Capital" data-lang-ro="Capital Romanesc">Romanian Capital</div>
+                            <div class="text-sm text-gray-600" data-lang-en="Romanian Capital" data-lang-it="Capitale Rumeno" data-lang-ro="Capital Romanesc">Romanian Capital</div>
                         </div>
                         <div class="text-center">
                             <div class="text-3xl font-bold text-purple-dark mb-2">24/7</div>
-                            <div class="text-sm text-gray-600" data-lang-en="Support Available" data-lang-ro="Suport Disponibil">Support Available</div>
+                            <div class="text-sm text-gray-600" data-lang-en="Support Available" data-lang-it="Supporto Disponibile" data-lang-ro="Suport Disponibil">Support Available</div>
                         </div>
                         <div class="text-center">
                             <div class="text-3xl font-bold text-purple-dark mb-2">50+</div>
-                            <div class="text-sm text-gray-600" data-lang-en="Projects Completed" data-lang-ro="Proiecte Finalizate">Projects Completed</div>
+                            <div class="text-sm text-gray-600" data-lang-en="Projects Completed" data-lang-it="Progetti Completati" data-lang-ro="Proiecte Finalizate">Projects Completed</div>
                         </div>
                         <div class="text-center">
                             <div class="text-3xl font-bold text-purple-dark mb-2">99%</div>
-                            <div class="text-sm text-gray-600" data-lang-en="Client Satisfaction" data-lang-ro="Satisfactia Clientilor">Client Satisfaction</div>
+                            <div class="text-sm text-gray-600" data-lang-en="Client Satisfaction" data-lang-it="Soddisfazione Clienti" data-lang-ro="Satisfactia Clientilor">Client Satisfaction</div>
                         </div>
                     </div>
                 </div>
                 <div class="bg-gradient-to-br from-purple-dark to-purple-medium rounded-2xl p-8 text-white">
-                    <h4 class="text-2xl font-bold mb-6" data-lang-en="Our Mission" data-lang-ro="Misiunea Noastra">Our Mission</h4>
-                    <p class="text-lg mb-6" data-lang-en="To deliver innovative IT solutions that transform businesses, streamline operations, and accelerate growth through cutting-edge technology and personalized service." data-lang-ro="Sa livram solutii IT inovatoare care transforma afacerile, optimizeaza operatiunile si accelereaza cresterea prin tehnologie de varf si servicii personalizate.">
+                    <h4 class="text-2xl font-bold mb-6" data-lang-en="Our Mission" data-lang-it="La Nostra Missione" data-lang-ro="Misiunea Noastra">Our Mission</h4>
+                    <p class="text-lg mb-6" data-lang-en="To deliver innovative IT solutions that transform businesses, streamline operations, and accelerate growth through cutting-edge technology and personalized service." data-lang-it="Fornire soluzioni IT innovative che trasformano le aziende, ottimizzano le operazioni e accelerano la crescita attraverso tecnologia all'avanguardia e servizi personalizzati." data-lang-ro="Sa livram solutii IT inovatoare care transforma afacerile, optimizeaza operatiunile si accelereaza cresterea prin tehnologie de varf si servicii personalizate.">
                         To deliver innovative IT solutions that transform businesses, streamline operations, and accelerate growth through cutting-edge technology and personalized service.
                     </p>
                     <div class="space-y-4">
                         <div class="flex items-center">
                             <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
-                            <span data-lang-en="Enterprise-level professionalism" data-lang-ro="Profesionalism de nivel enterprise">Enterprise-level professionalism</span>
+                            <span data-lang-en="Enterprise-level professionalism" data-lang-it="Professionalità di livello enterprise" data-lang-ro="Profesionalism de nivel enterprise">Enterprise-level professionalism</span>
                         </div>
                         <div class="flex items-center">
                             <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
-                            <span data-lang-en="Cutting-edge technology solutions" data-lang-ro="Solutii tehnologice de ultima generatie">Cutting-edge technology solutions</span>
+                            <span data-lang-en="Cutting-edge technology solutions" data-lang-it="Soluzioni tecnologiche all'avanguardia" data-lang-ro="Solutii tehnologice de ultima generatie">Cutting-edge technology solutions</span>
                         </div>
                         <div class="flex items-center">
                             <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
-                            <span data-lang-en="Personalized service approach" data-lang-ro="Abordare personalizata a serviciilor">Personalized service approach</span>
+                            <span data-lang-en="Personalized service approach" data-lang-it="Approccio di servizio personalizzato" data-lang-ro="Abordare personalizata a serviciilor">Personalized service approach</span>
                         </div>
                         <div class="flex items-center">
                             <div class="w-2 h-2 bg-white rounded-full mr-3"></div>
-                            <span data-lang-en="Scalable business growth" data-lang-ro="Crestere scalabila a afacerii">Scalable business growth</span>
+                            <span data-lang-en="Scalable business growth" data-lang-it="Crescita aziendale scalabile" data-lang-ro="Crestere scalabila a afacerii">Scalable business growth</span>
                         </div>
                     </div>
                 </div>
@@ -509,31 +581,31 @@
                         <img src="./img/cmg_nexa_logo.png" alt="CMG NEXA SRL" class="w-12 h-12 rounded-full object-cover mr-3">
                         <h4 class="text-xl font-bold">CMG NEXA SRL</h4>
                     </div>
-                    <p class="text-gray-300 text-sm" data-lang-en="Complete IT solutions that streamline operations and accelerate growth." data-lang-ro="Solutii IT complete care optimizeaza operatiunile si accelereaza cresterea.">Complete IT solutions that streamline operations and accelerate growth.</p>
+                    <p class="text-gray-300 text-sm" data-lang-en="Complete IT solutions that streamline operations and accelerate growth." data-lang-it="Soluzioni IT complete che ottimizzano le operazioni e accelerano la crescita." data-lang-ro="Solutii IT complete care optimizeaza operatiunile si accelereaza cresterea.">Complete IT solutions that streamline operations and accelerate growth.</p>
                     <div class="mt-4">
                         <img src="./img/odoo/odoo_ready_partners_rgb.svg" alt="Odoo Ready Partner" class="h-10 partner-badge">
                     </div>
                 </div>
                 <div>
-                    <h5 class="text-lg font-semibold mb-4" data-lang-en="Quick Links" data-lang-ro="Link-uri Rapide">Quick Links</h5>
+                    <h5 class="text-lg font-semibold mb-4" data-lang-en="Quick Links" data-lang-it="Link Rapidi" data-lang-ro="Link-uri Rapide">Quick Links</h5>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Services" data-lang-ro="Servicii">Services</a></li>
-                        <li><a href="odoo.html" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Odoo Solutions" data-lang-ro="Solutii Odoo">Odoo Solutions</a></li>
-                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors" data-lang-en="About Us" data-lang-ro="Despre Noi">About Us</a></li>
-                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Contact" data-lang-ro="Contact">Contact</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Services" data-lang-it="Servizi" data-lang-ro="Servicii">Services</a></li>
+                        <li><a href="odoo.html" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Odoo Solutions" data-lang-it="Soluzioni Odoo" data-lang-ro="Solutii Odoo">Odoo Solutions</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors" data-lang-en="About Us" data-lang-it="Chi Siamo" data-lang-ro="Despre Noi">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Contact" data-lang-it="Contatti" data-lang-ro="Contact">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h5 class="text-lg font-semibold mb-4" data-lang-en="Odoo Services" data-lang-ro="Servicii Odoo">Odoo Services</h5>
+                    <h5 class="text-lg font-semibold mb-4" data-lang-en="Odoo Services" data-lang-it="Servizi Odoo" data-lang-ro="Servicii Odoo">Odoo Services</h5>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="odoo.html" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Implementation" data-lang-ro="Implementare">Implementation</a></li>
-                        <li><a href="odoo.html" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Customization" data-lang-ro="Personalizare">Customization</a></li>
-                        <li><a href="odoo.html" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Training" data-lang-ro="Instruire">Training</a></li>
-                        <li><a href="odoo.html" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Support" data-lang-ro="Suport">Support</a></li>
+                        <li><a href="odoo.html" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Implementation" data-lang-it="Implementazione" data-lang-ro="Implementare">Implementation</a></li>
+                        <li><a href="odoo.html" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Customization" data-lang-it="Personalizzazione" data-lang-ro="Personalizare">Customization</a></li>
+                        <li><a href="odoo.html" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Training" data-lang-it="Formazione" data-lang-ro="Instruire">Training</a></li>
+                        <li><a href="odoo.html" class="text-gray-300 hover:text-white transition-colors" data-lang-en="Support" data-lang-it="Supporto" data-lang-ro="Suport">Support</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h5 class="text-lg font-semibold mb-4" data-lang-en="Contact Info" data-lang-ro="Informatii Contact">Contact Info</h5>
+                    <h5 class="text-lg font-semibold mb-4" data-lang-en="Contact Info" data-lang-it="Info Contatto" data-lang-ro="Informatii Contact">Contact Info</h5>
                     <div class="text-sm text-gray-300 space-y-2">
                         <p class="flex items-center">
                             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -564,7 +636,7 @@
                 </div>
             </div>
             <div class="border-t border-purple-medium pt-6 text-center">
-                <p class="text-sm text-gray-300" data-lang-en="&copy; 2025 CMG NEXA SRL. All rights reserved." data-lang-ro="&copy; 2025 CMG NEXA SRL. Toate drepturile rezervate.">&copy; 2025 CMG NEXA SRL. All rights reserved.</p>
+                <p class="text-sm text-gray-300" data-lang-en="&copy; 2025 CMG NEXA SRL. All rights reserved." data-lang-it="&copy; 2025 CMG NEXA SRL. Tutti i diritti riservati." data-lang-ro="&copy; 2025 CMG NEXA SRL. Toate drepturile rezervate.">&copy; 2025 CMG NEXA SRL. All rights reserved.</p>
             </div>
         </div>
     </footer>
